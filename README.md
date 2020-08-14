@@ -4,13 +4,13 @@ This repository includes Markdown files which cover hints and tips on a wide ran
 There are <!-- Count starts -->3<!-- Count ends --> TILs in this repository so far.
 
 <!-- TILs start -->
-## openssl
-
-- [TLS Debugging Snippets](https://github.com/fosdickio/til/blob/main/openssl/tls-debugging-snippets.md)
-
 ## github-actions
 
 - [Automate the Pushing of Commits to a Repository](https://github.com/fosdickio/til/blob/main/github-actions/automate-commit-pushes.md)
+
+## openssl
+
+- [TLS Debugging Snippets](https://github.com/fosdickio/til/blob/main/openssl/tls-debugging-snippets.md)
 
 ## vs-code
 
