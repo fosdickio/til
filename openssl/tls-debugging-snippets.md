@@ -1,4 +1,4 @@
-# OpenSSL: TLS Debugging Snippets
+# TLS Debugging Snippets
 This TIL provides several useful snippets for debugging TLS connections using the OpenSSL toolkit.
 
 ## Client

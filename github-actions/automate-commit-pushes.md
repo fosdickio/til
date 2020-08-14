@@ -1,5 +1,5 @@
-# GitHub Actions: Automate the Pushing of Commits to a Repository
-This TIL guides you through the process of pushing new commits to a GitHub repository using GitHub Actions.
+# Automate the Pushing of Commits to a Repository
+This TIL guides you through the process of pushing new local commits to a GitHub repository using GitHub Actions.
 
 ## Personal Access Token
 First, you'll want to configure a personal access token that GitHub Actions can use to access the repository and push to it.  This can be done from the [the settings page](https://github.com/settings/tokens).  Under `repo`, you'll want to select the `public_repo` scope.
