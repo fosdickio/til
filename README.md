@@ -6,13 +6,13 @@ There are <!-- Count starts -->3<!-- Count ends --> TILs in this repository so f
 <!-- TILs start -->
 ## openssl
 
-- [OpenSSL: TLS Debugging Snippets](https://github.com/fosdickio/til/blob/main/openssl/tls-debugging-snippets.md)
+- [TLS Debugging Snippets](https://github.com/fosdickio/til/blob/main/openssl/tls-debugging-snippets.md)
 
 ## github-actions
 
-- [GitHub Actions: Automate the Pushing of Commits to a Repository](https://github.com/fosdickio/til/blob/main/github-actions/automate-commit-pushes.md)
+- [Automate the Pushing of Commits to a Repository](https://github.com/fosdickio/til/blob/main/github-actions/automate-commit-pushes.md)
 
 ## vs-code
 
-- [Visual Studio Code: Markdown Keyboard Shortcuts](https://github.com/fosdickio/til/blob/main/vs-code/markdown-keyboard-shortcuts.md)
+- [Markdown Keyboard Shortcuts](https://github.com/fosdickio/til/blob/main/vs-code/markdown-keyboard-shortcuts.md)
 <!-- TILs end -->
