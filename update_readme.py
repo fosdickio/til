@@ -36,7 +36,7 @@ def build_database():
 def update_readme():
     db = sqlite_utils.Database(ROOT_PATH / "til.db")
     by_topic = {}
-    for row in db["til"].rows_where():
+    for row in db["til"].rows_where(order_by="topic"):
         by_topic.setdefault(row["topic"], []).append(row)
     index = ["<!-- TILs start -->"]
     for topic, rows in by_topic.items():
