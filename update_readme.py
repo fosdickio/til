@@ -63,5 +63,5 @@ def update_readme():
 
 
 if __name__ == "__main__":
-    # build_database()
+    build_database()
     update_readme()
