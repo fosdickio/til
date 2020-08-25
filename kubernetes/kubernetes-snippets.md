@@ -1,4 +1,4 @@
-# Useful Kubernetes Snippets
+# Kubernetes Snippets
 
 ## Kubernetes
 ```bash

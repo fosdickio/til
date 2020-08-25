@@ -1,4 +1,4 @@
-# Useful Git Snippets
+# Git Snippets
 
 ## Syncing with an Upstream Branch
 
