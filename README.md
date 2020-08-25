@@ -4,7 +4,7 @@
 
 This repository includes Markdown files which cover hints and tips on a wide range of topics.  Each file serves as a quick reference guide on an individual topic within a category which can be used at a later date.  I've made the repository public in hopes that someone else might also find them useful.
 
-There are <!-- Count starts -->6<!-- Count ends --> TILs in this repository so far.  The below snippets are dynamically generated using GitHub Actions.
+There are <!-- Count starts -->10<!-- Count ends --> TILs in this repository so far.  The below snippets are dynamically generated using GitHub Actions.
 
 <!-- TILs start -->
 ## concurrency
@@ -23,9 +23,19 @@ There are <!-- Count starts -->6<!-- Count ends --> TILs in this repository so f
 
 - [Useful Kubernetes Snippets](https://github.com/fosdickio/til/blob/main/kubernetes/useful-kubernetes-snippets.md)
 
+## network-engineering
+
+- [Network Engineering Notes](https://github.com/fosdickio/til/blob/main/network-engineering/network-engineering-notes.md)
+- [Layered Network Model](https://github.com/fosdickio/til/blob/main/network-engineering/layered-network-model.md)
+
 ## openssl
 
 - [TLS Debugging Snippets](https://github.com/fosdickio/til/blob/main/openssl/tls-debugging-snippets.md)
+
+## python
+
+- [Python Snippets](https://github.com/fosdickio/til/blob/main/python/python-snippets.md)
+- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md)
 
 ## vs-code
 
