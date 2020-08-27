@@ -1,2 +1,4 @@
-sqlite-utils
+beautifulsoup4
+GitPython
 py-gfm
+sqlite-utils
