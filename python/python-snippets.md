@@ -12,6 +12,8 @@ if __name__ == "__main__":
     main()
 ```
 
+---
+
 ## Parsing Arguments
 ```python
 from argparse import ArgumentParser, FileType
@@ -47,6 +49,70 @@ args = parse_args()
 print(args.numofitems)
 ```
 
+---
+
+## API Calls
+
+### Make API Calls
+```python
+import requests
+
+class APIWrapper:
+    def __init__(self, api_key = None):
+        self.api_key = api_key
+
+    def make_api_call(self, url, **kwargs):
+        """
+        Helper function to perform API requests.
+
+        url : string - the URL being requested
+        """
+        response = requests.get(url, params=kwargs, timeout=60)
+        status = response.status_code
+
+        if status == 200:
+            return response.text
+        elif status == 400:
+            raise errors.APIInsufficientArguments(url, kwargs)
+        elif status == 404:
+            raise errors.APIMethodUnavailable(url)
+        elif status == 503:
+            raise errors.APITimeoutError()
+        else:
+            raise errors.BaseError(msg=response.reason)
+```
+
+### Handle API Call Errors
+```python
+class BaseError(Exception):
+    """
+    Generic error wrapper.
+    """
+    def __init__(self, msg):
+        self._msg = msg
+
+    def __str__(self):
+        return repr(self._msg)
+
+class APIInsufficientArguments(BaseError):
+    def __init__(self, query = None, params = None):
+        self._msg = "HTTP 400: Insufficient arguments for \"{0}\". Parameters provided: {1}".format(query, params)
+
+class APIAuthenticationError(BaseError):
+    def __init__(self, api_key = None):
+        self._msg = "HTTP 403: Authentication error caused by API key \"{}\".".format(api_key)
+
+class APIMethodUnavailable(BaseError):
+    def __init__(self, method_url = None):
+        self._msg = "HTTP 404: \"{}\" is an unsupported/discontinued API method.".format(method_url)
+
+class APITimeoutError(BaseError):
+    def __init__(self):
+        self._msg = "HTTP 503: Timeout error."
+```
+
+---
+
 ## Logging
 ```python
 import logging
@@ -54,11 +120,15 @@ logger = logging.getLogger('my_logger')
 logger.setLevel(args.loglevel)
 ```
 
+---
+
 ## JSON to YAML
 ```python
 import yaml # pyyaml in requirements.txt
 yaml.dump(json_data, output_file)
 ```
+
+---
 
 ## Travis CI
 ```
