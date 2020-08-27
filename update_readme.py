@@ -82,7 +82,7 @@ def update_readme():
     for topic, rows in by_topic.items():
         index.append("## {}\n".format(topic))
         for row in rows:
-            index.append("- [{}]({}) - {}".format(row["title"], row["url"], row["updated"].split("T")[0]))
+            index.append("- [{}]({}) ({})".format(row["title"], row["url"], row["updated"].split("T")[0]))
         index.append("")
     if index[-1] == "":
         index.pop()
