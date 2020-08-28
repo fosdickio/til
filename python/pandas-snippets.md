@@ -107,9 +107,7 @@ df.std()
 ### Rolling Statistics
 - [`rolling` Documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rolling.html)
 ```python
-rm_spy = pd.rolling_mean(df['SPY'], window=20)
-
-# Plot SPY, retain matplotlib axis object
+# Plot SPY
 ax = df['SPY'].plot(title="SPY Rolling Mean", label='SPY')
 
 # Compute rolling mean using a 20-day window
