@@ -92,3 +92,35 @@ ax.set_xlabel('Date')
 ax.set_ylabel('Price')
 plt.show()
 ```
+
+---
+
+## Statistical Analysis
+
+### Global Statistics
+```python
+df.mean()
+df.median()
+df.std()
+```
+
+### Rolling Statistics
+- [`rolling` Documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rolling.html)
+```python
+rm_spy = pd.rolling_mean(df['SPY'], window=20)
+
+# Plot SPY, retain matplotlib axis object
+ax = df['SPY'].plot(title="SPY Rolling Mean", label='SPY')
+
+# Compute rolling mean using a 20-day window
+rm_spy = df['SPY'].rolling(window=20).mean()
+
+# Add rolling mean to same plot
+rm_spy.plot(label='Rolling mean', ax=ax)
+
+# Add axis labels and legend
+ax.set_xlabel("Date")
+ax.set_ylabel("Price")
+ax.legend(loc='upper left')
+plt.show()
+```
