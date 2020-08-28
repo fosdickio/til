@@ -34,9 +34,9 @@ There are <!-- Count starts -->11<!-- Count ends --> TILs in this repository so 
 
 ## python
 
-- [NumPy Snippets](https://github.com/fosdickio/til/blob/main/python/numpy-snippets.md) (2020-08-27)
-- [Python Snippets](https://github.com/fosdickio/til/blob/main/python/python-snippets.md) (2020-08-26)
-- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md) (2020-08-27)
+- [NumPy Snippets](https://github.com/fosdickio/til/blob/main/python/numpy-snippets.md) (2020-08-28)
+- [Python Snippets](https://github.com/fosdickio/til/blob/main/python/python-snippets.md) (2020-08-27)
+- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md) (2020-08-28)
 
 ## visual-studio-code
 
