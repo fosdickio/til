@@ -3,7 +3,7 @@
 ## Statistical Analysis of Time Series Data
 
 ### Rolling Statistics
-![Rolling statistics](https://raw.githubusercontent.com/fosdickio/til/master/python/img/rolling-statistics.png)
+![Rolling statistics](https://raw.githubusercontent.com/fosdickio/til/main/python/img/rolling-statistics.png)
 
 - [`rolling` Documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rolling.html)
 
@@ -30,7 +30,7 @@ plt.show()
 ```
 
 ### Bollinger Bands
-![Rolling statistics](https://raw.githubusercontent.com/fosdickio/til/master/python/img/bollinger-bands.png)
+![Rolling statistics](https://raw.githubusercontent.com/fosdickio/til/main/python/img/bollinger-bands.png)
 
 ```python
 # Read data
@@ -62,7 +62,7 @@ plt.show()
 ```
 
 ### Daily Returns
-![Daily returns](https://raw.githubusercontent.com/fosdickio/til/master/python/img/daily-returns.png)
+![Daily returns](https://raw.githubusercontent.com/fosdickio/til/main/python/img/daily-returns.png)
 
 ```python
 # Using Pandas
@@ -71,4 +71,4 @@ daily_returns.ix[0, :] = 0
 ```
 
 ### Cumulative Returns
-![Cumulative returns](https://raw.githubusercontent.com/fosdickio/til/python/finance/img/cumulative-returns.png)
+![Cumulative returns](https://raw.githubusercontent.com/fosdickio/til/main/python/img/cumulative-returns.png)
