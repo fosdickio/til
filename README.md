@@ -4,7 +4,7 @@
 
 This repository includes Markdown files which cover hints and tips on a wide range of topics.  Each file serves as a quick reference guide on an individual topic within a category which can be used at a later date.  I've made the repository public in hopes that someone else might also find them useful.
 
-There are <!-- Count starts -->11<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one.  The TIL list below was dynamically generated using GitHub Actions.
+There are <!-- Count starts -->12<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one.  The TIL list below was dynamically generated using GitHub Actions.
 
 <!-- TILs start -->
 ## concurrency
@@ -25,8 +25,8 @@ There are <!-- Count starts -->11<!-- Count ends --> TILs in this repository so 
 
 ## network-engineering
 
-- [Network Engineering Notes](https://github.com/fosdickio/til/blob/main/network-engineering/network-engineering-notes.md) (2020-08-23)
 - [Layered Network Model](https://github.com/fosdickio/til/blob/main/network-engineering/layered-network-model.md) (2020-08-23)
+- [Network Engineering Notes](https://github.com/fosdickio/til/blob/main/network-engineering/network-engineering-notes.md) (2020-08-23)
 
 ## openssl
 
@@ -34,9 +34,10 @@ There are <!-- Count starts -->11<!-- Count ends --> TILs in this repository so 
 
 ## python
 
-- [NumPy Snippets](https://github.com/fosdickio/til/blob/main/python/numpy-snippets.md) (2020-08-28)
 - [Python Snippets](https://github.com/fosdickio/til/blob/main/python/python-snippets.md) (2020-08-27)
-- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md) (2020-08-28)
+- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md) (2020-09-02)
+- [Python for Finance](https://github.com/fosdickio/til/blob/main/python/python-for-finance.md) (2020-09-02)
+- [NumPy Snippets](https://github.com/fosdickio/til/blob/main/python/numpy-snippets.md) (2020-08-28)
 
 ## visual-studio-code
 
