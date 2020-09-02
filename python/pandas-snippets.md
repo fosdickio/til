@@ -93,6 +93,42 @@ ax.set_ylabel('Price')
 plt.show()
 ```
 
+### Histograms
+```python
+# Compute daily returns
+daily_returns = df.copy()
+daily_returns[1:] = (df[1:] / df[:-1].values) - 1
+daily_returns.ix[0, :] = 0  # Set daily returns for row 0 to 0
+plot_data(daily_returns, title='Daily returns', ylabel='Daily returns')
+
+# Plot a histogram
+daily_returns.hist()  # Default number of bins: 10
+daily_returns.hist(bins=20)
+
+# Get mean and standard deviation
+mean = daily_returns['SPY'].mean()
+std = daily_returns['SPY'].std()
+
+plt.axvline(mean, color='w', linestyle='dashed', linewidth=2)
+plt.axvline(std, color='r', linestyle='dashed', linewidth=2)
+plt.axvline(-std, color='r', linestyle='dashed', linewidth=2)
+plt.show()
+
+# Compute kurtosis
+print(daily_returns.kurtosis())
+```
+
+### Scatterplots
+```python
+import numpy as np
+
+# SPY vs GLD Scatterplot
+daily_returns.plot(kind='scatter', x='SPY', y='GLD')
+beta_gld, alpha_gld= np.polyfit(daily_returns['SPY'], daily_returns['GLD'], 1)
+plt.plot(daily_returns['SPY'], beta_gld * daily_returns['SPY'] + alpha_gld, '-',color='r')
+plt.show()
+```
+
 ---
 
 ## Statistical Analysis
@@ -121,4 +157,18 @@ ax.set_xlabel("Date")
 ax.set_ylabel("Price")
 ax.legend(loc='upper left')
 plt.show()
+```
+
+---
+
+## Incomplete Data
+
+- [`fillna` Documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html)
+
+```python
+# Forward fill
+ df_data.fillna(method="ffill", inplace=True)
+
+ # Backward fill
+ df_data.fillna(method="bfill", inplace=True)
 ```
