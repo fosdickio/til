@@ -4,7 +4,7 @@ This TIL guides you through the process of pushing new local commits to a GitHub
 ## Personal Access Token
 First, you'll want to configure a personal access token that GitHub Actions can use to access the repository and push to it.  This can be done from the [the settings page](https://github.com/settings/tokens).  Under `repo`, you'll want to select the `public_repo` scope.
 
-![Personal access token configuration](https://raw.githubusercontent.com/fosdickio/til/master/github-actions/img/automate-commit-pushes-1.png)
+![Personal access token configuration](https://raw.githubusercontent.com/fosdickio/til/main/github-actions/img/automate-commit-pushes-1.png)
 
 ## Automation via build.yml
 In order to automate the commit and push (if changes are found), you can add the following to your `.github/workflows/build.yml` file:
