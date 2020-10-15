@@ -104,7 +104,7 @@
 ![Checking Deviation](img/the-magnetic-compass/checking-deviation.gif)
 - TVMDC (True &rarr; Variation &rarr; Magnetic &rarr; Deviation &rarr; Compass)
   - True Virtues Make Dull Companions
-![Applying Corrections](img/the-magnetic-compass/applying-corrections.jpg)
+  ![Applying Corrections](img/the-magnetic-compass/applying-corrections.jpg)
 
 ### Compass Errors (Key Points)
 - **Variation** - caused by the compass pointing at the magnetic pole, which is not the same as the true north pole
@@ -165,3 +165,62 @@
   5.  Then add the tidal vector at the end of the distance run line. Let's say for that half hour the set and drift was 100°T and 0.5M.
   6.  Lay off the tide set and drift from the end of the distance vector.
   7.  Then draw another line (parallel to the first bearing line) passing through the end of the tide vector just plotted.  Where it cuts the second bearing line is your position fix.
+
+---
+
+## Tides
+
+### Tides
+- Tides are caused by the gravitational effects between the earth, the moon, and the sun.
+  - The moon, being relatively closer, has a proportionally greater effect than the sun.
+
+### Spring Tides
+![Spring Tides](img/tides/spring-tides.jpg)
+![Spring Tides](img/tides/spring-tides2.jpg)
+- When the sun and moon are aligned, the combined gravitational pull gives the highest tide.
+- Spring tides occur every 2 weeks.
+
+### Neap Tides
+![Neap Tides](img/tides/neap-tides.jpg)
+![Neap Tides](img/tides/neap-tides2.jpg)
+- When aligned in this manner, we get the smallest bulges of water with less difference between the high and low tides.
+- This gives us the highest tidal ranges occurring roughly every fortnight and the lowest ranges occurring in between.
+- Tied with the moon's phases, the tidal cycle is over about 6 hours and 20 minutes, so this advances the times of the tides by about one hour per day.
+
+### Tidal Heights
+![Tidal Heights](img/tides/tidal-heights.jpg)
+![Tidal Heights](img/tides/tidal-heights2.jpg)
+
+### Springs or Neaps
+![Springs or Neaps](img/tides/springs-or-neaps.jpg)
+
+### Tidal Curves
+![Tidal Curves](img/tides/tidal-curves.jpg)
+
+### Rule of Twelfths
+![Rule of Twelfths](img/tides/rule-of-twelfths.jpg)
+- The rule states that in the first hour from either high or low water, the height will move by 1 twelfth of the day's range.  In the second hour, it will be 2 twelfths.  In the third hour, it will be 3 twelfths.  And so on..
+
+### Secondary Ports
+![Secondary Ports](img/tides/secondary-ports.jpg)
+![Crocodiles](img/tides/crocodiles.jpg)
+
+---
+
+## Tidal Streams
+
+### Tides
+- The rise and fall of water level gives rise to water flowing (and reversing) in fairly predictable streams.
+- The job of the navigator is to use the tidal steams to best advantage for passage planning.
+- Tidal streams are strongest with spring tides.
+
+### Tidal Atlas
+![Tidal Atlas](img/tidal-streams/tidal-atlas.jpg)
+- The arrows are varying size and thickness.  The thicker and larger the arrow, the stronger the tide.
+
+### Computation of Rates Tables
+![Computation of Rates](img/tidal-streams/computation-of-rates.jpg)
+
+### Course to Steer
+![Course to Steer](img/tidal-streams/course-to-steer.jpg)
+![Course to Steer](img/tidal-streams/course-to-steer2.jpg)
