@@ -253,3 +253,66 @@
 ### Lights Aiding Navigation
 ![Lights Aiding Navigation](img/lights/lights-aiding-navigation.gif)
 - On charts and in almanacs, light nominal range is given.  This is the maximum distance at which you would see the light given good visibility and being high enough to see it.
+
+---
+
+## Pilotage
+
+### Pilotage Terminology
+- A **transit** is two fixed points when aligned give a line of position.
+- A **headmark** is something for the helmsman to aim for.
+- A **pilot book** is a navigator's guide.
+
+---
+
+## GPS & Electronic Aids to Navigation
+
+### Electronic Navigation - GPS, Radar, AIS
+- GPS &rarr; Global Positioning System
+
+### AIS - Automatic Identification System
+- AIS works by having a vessel continuously transmit on VHF data on itself (it's position derived from GPS, course heading, etc.) and this is tracked and displayed on a screen on any vessel receiving the signals.
+
+### RADAR
+- Radar operates by sending out a rotating beam of radio frequency waves and capturing the echoes received back and displaying them on a screen.
+- There are also RACON beacons (RAdar beaCONs) that transmit a signal when struck by a radar beam and they send back a morse letter that displays on the screen, which makes clear identification obvious.  They are often found on buoys.
+
+### GPS - Global Positioning System
+![GPS](img/gps/gps.jpg)
+- There are a number of GNSS (Global Navigation Satellite Systems) in operation today as well as the original US developed GPS system which became operational in 1995.
+- GNSS structures are based on a network of 30 + satellites that orbit the earth about 11,000 miles high.
+  - Signals are needed from at least three satellites to give a receiver an accurate location on the earth's surface.
+  - Each satellite constantly sends out its identification, location, movement details, and the time.
+  - By comparing the time difference between when a signal is sent and when it is received by your GPS set, your set knows how far it is away from the satellite.  This gives the set a position sphere that it lies on.  With some more satellites details and spheres, your set can work out where it is.
+
+---
+
+## Echo Sounders
+
+### Echo Sounders
+![Echo Sounders](img/echo-sounders/echo-sounder.gif)
+- The echo sounder sends an ultrasonic pulse through the water from a transducer mounted in the hull of the boat. The time taken to receive the echo back to the boat is measured, and this gives the depth of water.
+
+---
+
+## Logs (Speed and Distance)
+
+### The Log
+- The log on a vessel records how far the ship has gone through the water.
+- The log takes its name from the 17th century practice of throwing a log into the water attached by a line with knots every so often.  By counting how many knots passed through their hands, the sailor could estimate how fast the vessel was traveling, and hence derive the distance traveled.
+- Units of measurement
+  - Distance is measured in nautical miles (NM).
+  - Speed is measured in units of nautical miles per hour (knots).
+
+---
+
+## Deck Log
+
+### The Deck Log
+- The deck log is the document on board ship that records position, significant events, and the information needed for dead reckoning navigation.
+  - Tracking the barometer readings in the log is also a good weather forecasting tool.
+  - For commercial vessels (and this includes many yachts both power and sail), the log is a legal requirement.
+  - Other useful entries will include GPS position, significant course changes, and events of note (such as accidents, births, marriages and deaths).
+- If there are any future inquiries, the authorities will wish to examine the log in detail.
+  - It is the ship master's responsibility to ensure the log is completed, but it can be filled in by whoever is delegated to do it.
+- It is very practical to have a record updated hourly of your position, so that you have somewhere to back track to if your electronics go down.
