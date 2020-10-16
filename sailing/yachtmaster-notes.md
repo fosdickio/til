@@ -104,7 +104,7 @@
 ![Checking Deviation](img/the-magnetic-compass/checking-deviation.gif)
 - TVMDC (True &rarr; Variation &rarr; Magnetic &rarr; Deviation &rarr; Compass)
   - True Virtues Make Dull Companions
-  ![Applying Corrections](img/the-magnetic-compass/applying-corrections.jpg)
+  - ![Applying Corrections](img/the-magnetic-compass/applying-corrections.jpg)
 
 ### Compass Errors (Key Points)
 - **Variation** - caused by the compass pointing at the magnetic pole, which is not the same as the true north pole
@@ -224,3 +224,32 @@
 ### Course to Steer
 ![Course to Steer](img/tidal-streams/course-to-steer.jpg)
 ![Course to Steer](img/tidal-streams/course-to-steer2.jpg)
+
+---
+
+## Buoyage
+
+### Cardinal Marks
+![Cardinal Marks](img/buoyage/cardinal-marks.jpg)
+- Cardinal marks are so called because they are named after the four main cardinal points of the compass - north, south, east and west.
+- A north cardinal is placed to the north of a hazard.
+- A cardinal mark indicates where the best and safest water may be found and may indicate the safe side to pass a danger or feature (such as the end of a sand bank).
+
+### Lateral Buoys
+![Lateral Buoys](img/buoyage/lateral-buoys.jpg)
+![Lateral Buoys](img/buoyage/lateral-buoys2.jpg)
+
+### Lateral Marks
+![Lateral Marks A](img/buoyage/lateral-marks.gif)
+![Lateral Marks B](img/buoyage/lateral-marks2.gif)
+- If the buoys have lights (not all do) then the lateral marks will usually have coloured lights and flash the same colour as the buoy.
+- IALA - A: system used in Africa, Australia, Europe, India, New Zealand, and Russia.
+- IALA - B: system used in Canada, USA, South America, southeast Asia, and parts of the Caribbean.
+
+---
+
+## Lights
+
+### Lights Aiding Navigation
+![Lights Aiding Navigation](img/lights/lights-aiding-navigation.gif)
+- On charts and in almanacs, light nominal range is given.  This is the maximum distance at which you would see the light given good visibility and being high enough to see it.
