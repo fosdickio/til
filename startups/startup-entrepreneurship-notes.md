@@ -5,12 +5,16 @@
 ### 1. Articulate Your Purpose
 - Video: ["Start With Why"](https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action?language=en)
 - Once you know your purpose, don’t spend any time wordsmithing it. Just write it down. This is your reason for being. Make sure everyone knows it, including the people you hire, your investors, your mentors, and your community.
+
 ### 2. Commit To At Least 10 Years
+
 ### 3. Get Family On Board
+
 ### 4. Define Your Culture
 - Think carefully about what you want your culture to be and live it every day inside your business. Your culture can be defined as a set of values that you’ll always protect.
 - Imagine a chart with performance on the X-axis and cultural fit on the Y-axis.  Moving someone along the X-axis if they’re not doing well is possible, but if they are not doing well on the Y-axis, then you have to move quickly to fire that person or the individual will compromise your culture.
 - Firing people who are high performers and poor cultural fit is critical for maintaining culture over time and living your values.
+
 ### 5. Avoid Cofounder Conflict
 - It is important for cofounders to discuss and agree on the following before starting a new business:
   - How should we split the equity?
@@ -24,15 +28,19 @@
   - Will any of us be investing cash in this company? How will this be treated?
   - What will we be paid? How will this change over time and who will decide?
   - How will we fund the company and what happens if we can’t raise capital?
+
 ### 6. Assume You Are Wrong
 - I’ve found that founders who start out assuming that they’re wrong end up doing the best. They recognize that all of their assumptions are just their best guesses. They are active listeners and are objective about the results they get early on. They test every assumption before accepting that it’s correct. They find ways to instrument their products so that they get data. Then they combine that with their gut feeling and intuition and test some more.
+
 ### 7. Engage Mentors
 - I advise a quality-over-quantity approach when it comes to mentors. - Find a few experienced mentors who give first and ask for nothing in return.
 - Blog Post: ["Find and Engage Great Mentors"](https://www.techstars.com/content/blog/tip-2-find-and-engage-great-mentors/)
 - Start with small requests via email, close the loop with those who offer feedback, and make it easy to engage with you as a mentee by going to their office for 15 minutes instead of inviting them to coffee or lunch. Target mentors who actually care about you and what you’re building and leverage them early and often. But remember to give back to them and make sure they’re getting something from the relationship.
+
 ### 8. Establish The Company
 - Consult an attorney early and pick one that is experienced with startups. A great question to ask them is how many companies they’ve worked with that have attracted venture capital.
   - They’ll help you understand what makes sense for you in terms of corporate structure and give you basic agreements you can use with early employees or contractors.
+
 ### 9. Understand Financing Options
 - Startup loans
 - Customer capital
@@ -41,6 +49,7 @@
   - Angels invest with their own money
   - Venture capitalists invest on behalf of their limited partners
   - Resources: angel.co, avc.com, techstars.com
+
 ### 10. Don’t Wait - Start
 - The hardest thing about starting a startup is starting.
 - There’s nothing like the clarity of doing.  So don’t wait.  Don’t find excuses.  Just start doing.
@@ -91,7 +100,6 @@
 ---
 
 ## Founding team pitfalls
-
 - Steve Jobs had a caution about this mode of entrepreneurial decision making: “Follow your heart, but check it with your head.” Before defaulting to the gut, make sure you’ve also engaged the brain. Make sure you’ve thought ahead to the potential consequences of your decision. If the head and heart agree, then terrific: You’re off and running. However, if they disagree, pull back on the reins before you default to what your gut is telling you, for it may be leading you into trouble rather than glory.
 - Despite all of the attention paid to product development and market-related issues within startups, among startups that fail, people problems are the leading cause by far, accounting for nearly two-thirds of the failures.
 - For founders, the key is to understand ahead of time when they will be making a key people decision and how the options they face could heighten the potential while increasing the risks.
