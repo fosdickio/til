@@ -316,3 +316,72 @@
 - If there are any future inquiries, the authorities will wish to examine the log in detail.
   - It is the ship master's responsibility to ensure the log is completed, but it can be filled in by whoever is delegated to do it.
 - It is very practical to have a record updated hourly of your position, so that you have somewhere to back track to if your electronics go down.
+
+---
+
+## Meteorology
+
+### The Earth's Atmosphere 
+![The Earth's Atmosphere](img/meteorology/atmosphere.jpg)
+
+### Heat
+![Heat](img/meteorology/heat.gif)
+- As air is heated, it becomes less dense, and rises.
+- As air is cooled, it becomes denser and falls.
+- Warm air can absorb lots of water.  As it cools it cannot, so it releases it.
+- Different densities don't mix easily.
+
+### Weather
+![Weather](img/meteorology/weather.jpg)
+- The heat from the sun warms up the surface of seas and the land during the day.
+  - This warming then heats up the air above.
+  - The land heats up more quickly than the sea and it also cools more quickly at night.
+  - The sea stays at a more constant temperature and is also slower to give off heat at night.
+  - There is less heating at the poles, so they are cooler regions.  As the cooler air is more dense, they are regions of high pressure with large stable air masses situated around the poles.
+- This heating of the surface causes significant air current circulation and regions of high and low pressure where the air rises and falls.
+- Air will attempt to flow from high to low pressure.
+
+![Weather](img/meteorology/weather2.jpg)
+
+![Coriolis Force](img/meteorology/coriolis-force.gif)
+
+![Weather](img/meteorology/weather3.jpg)
+
+### Fronts
+![Fronts](img/meteorology/fronts.jpg)
+![Northern Hemisphere Fronts](img/meteorology/fronts2.jpg)
+
+### Weather Map Symbols
+![Weather Map Symbols](img/meteorology/weather-symbols.jpg)
+
+### Wind and Land
+![Sea Breeze](img/meteorology/sea-breeze.jpg)
+
+![Land Breeze](img/meteorology/land-breeze.jpg)
+
+![Convergance](img/meteorology/convergance.jpg)
+
+![Divergance](img/meteorology/divergance.jpg)
+
+### Wind and Sea
+![Wind and Tide](img/meteorology/wind-and-tide.gif)
+
+### Fog and Mist
+![Fog and Mist](img/meteorology/fog-and-mist.jpg)
+- Advection (meaning lateral movement) fog occurs when air that is warm and moist meets a cooler sea surface and fog forms.
+- Radiation fog occurs at night when the land cools down by radiating its heat.
+
+---
+
+## Rule of the Road
+
+### Rule 7 - Risk of Collision?
+![Rule 7 - Risk of Collision?](img/rule-of-the-road/rule-7.jpg)
+- To determine if a risk of collision exists, taking a bearing of vessel B from vessel A shows that the bearing is not changing appreciably, therefore a risk of collision exists.
+- Bearings should usually be taken at intervals of not more than 3 minutes.
+
+### Rule 12 - Sailing Vessels
+![Rule 12 - Sailing Vessels](img/rule-of-the-road/rule-12a.jpg)
+- When sailing vessels are on the same tacks, the vessel closest to where the wind is coming from (windward vessel) will keep out of the way of the vessel downwind (leeward vessel).
+
+![Rule 12 - Sailing Vessels](img/rule-of-the-road/rule-12b.jpg)
