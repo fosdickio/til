@@ -31,17 +31,17 @@ There are two complementary patterns to support high availability: **fail-over**
 - Active-active failover can also be referred to as master-master failover.
 
 ### Availability Numbers
-#### 99.9% availability - three 9s
-| Duration | Acceptable downtime |
---- | --- | ---
+#### 99.9% Availability - Three 9s
+| Duration | Acceptable Downtime |
+| --- | --- |
 | Downtime per year | 8h 45min 57s |
 | Downtime per month | 43m 49.7s |
 | Downtime per week | 10m 4.8s |
 | Downtime per day | 1m 26.4s |
 
-#### 99.99% availability - four 9s
-| Duration | Acceptable downtime |
---- | --- | ---
+#### 99.99% Availability - Four 9s
+| Duration | Acceptable Downtime |
+| --- | --- |
 | Downtime per year | 52min 35.7s |
 | Downtime per month | 4m 23s |
 | Downtime per week | 1m 5s |
