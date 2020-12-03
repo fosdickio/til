@@ -185,10 +185,10 @@ Types of caching:
 - **CDN caching** - CDNs are considered a type of caching
 - **Web server caching** - reverse proxies and caches can serve static and dynamic content directly
 - **Database caching** - databases usually includes some level of caching in a default configuration, optimized for a generic use case
-  - Caching at the database query level - whenever you query the database, hash the query as a key and store the result to the cache. This approach suffers from expiration issues:
+  - Caching at the database query level - whenever you query the database, hash the query as a key and store the result to the cache. This approach suffers from expiration issues.
   - Caching at the object level - see your data as an object, similar to what you do with your application code.
-- **Application caching** - in-memory caches such as Memcached and Redis are key-value stores between your application and your data storage; since the data is held in RAM, it is much faster than typical databases where data is stored on disk.
-RAM is more limited than disk, so cache invalidation algorithms such as least recently used (LRU) can help invalidate 'cold' entries and keep 'hot' data in RAM.
+- **Application caching** - in-memory caches such as Memcached and Redis are key-value stores between your application and your data storage; since the data is held in RAM, it is much faster than typical databases where data it is stored on disk.
+  - RAM is more limited than disk, so cache invalidation algorithms such as least recently used (LRU) can help invalidate 'cold' entries and keep 'hot' data in RAM.
 
 Suggestions of what to cache:
 
