@@ -93,3 +93,13 @@ type Post {
   author: Person!
 }
 ```
+
+## Error Handling
+A successful GraphQL query is supposed to return a JSON object with a root field called `data`. If the request fails or partially fails, a second root field called `errors` is added to the response:
+
+```
+{
+  "data": { ... },
+  "errors": [ ... ]
+}
+```
