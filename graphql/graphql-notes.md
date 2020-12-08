@@ -12,10 +12,12 @@
   - It’s database agnostic and effectively can be used in any context where an API is used.
 
 ## Data Fetching
-With a REST API, you would typically gather the data by accessing multiple endpoints
+With a REST API, you would typically gather the data by accessing multiple endpoints.
+
 ![REST Data Fetching](img/rest-data-fetching.png)
 
 In GraphQL on the other hand, you’d simply send a single query to the GraphQL server that includes the concrete data requirements.  The server then responds with a JSON object where these requirements are fulfilled.
+
 ![GraphQL Data Fetching](img/graphql-data-fetching.png)
 
 ## Schema and Type System
