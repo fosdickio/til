@@ -51,7 +51,7 @@ iex> h
 ## High-Level Transformations
 
 ### Nested Function Calls
-The following examples are 3 different ways of writing the same code
+The following examples are 3 different ways of writing the same code.
 ```bash
 # Intermediate variables
 def handle(request) do
@@ -71,7 +71,9 @@ request
 |> format_response
 ```
 
-## Terms
+## Pattern Matching
+
+### Terms
 A term is a value of any data type: a string, an atom, a map, a list, etc.
 
 ### Atoms / Maps
@@ -88,4 +90,47 @@ It's so common to use atoms as keys that Elixir gives us a shortcut.
 If the keys are anything but atoms, you must use the general `=>` form. For example, below is a map with strings as keys.
 ```bash
 %{ "method" => "GET", "path" => "/wildthings" }
+```
+
+## Immutable Data
+
+### Accessing Map Values with Atoms vs. Strings
+
+Suppose we have the following map defined in an iex session:
+In the below map, the keys are atoms, so to get the values associated with the keys we can use the square-bracket syntax.
+```bash
+iex> conv = %{ method: "GET", path: "/wildthings" }
+
+iex> conv[:path]
+"/wildthings"
+```
+
+When the keys are atoms, you can also use the dot notation.
+```bash
+iex> conv.path
+"/wildthings"
+```
+
+Supposing that we instead use strings for the map keys, we must use strings with the square-bracket syntax.
+```bash
+iex> conv = %{ "method" => "GET", "path" => "/wildthings" }
+
+iex> conv["path"]
+"/wildthings"
+```
+
+### Bytes
+A sequence of bytes in Elixir is referred to as a binary.  Double-quoted Elixir strings are represented internally as a sequence of bytes.  Thus, double-quoted strings are binaries.
+
+A string is a UTF-8 encoded binary.  As an example, the character "ö" takes 2 bytes to be represented in UTF-8.  So, even though the string has 20 characters, the number of bytes in that string is 21.
+
+```bash
+iex> resp_body = "Bears, Liöns, Tigers"
+"Bears, Liöns, Tigers"
+
+iex> String.length(resp_body)
+20
+
+iex> byte_size(resp_body)
+21
 ```
