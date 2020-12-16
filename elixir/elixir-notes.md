@@ -93,6 +93,7 @@ If the keys are anything but atoms, you must use the general `=>` form. For exam
 ```
 
 ## Immutable Data
+Programming with immutable data is a hallmark of functional programming.
 
 ### Accessing Map Values with Atoms vs. Strings
 
@@ -133,4 +134,56 @@ iex> String.length(resp_body)
 
 iex> byte_size(resp_body)
 21
+```
+
+## Function Clauses
+In Elixir you don't use conditional expressions as often as you would in imperative languages.  Instead, it's more idiomatic to control the flow of a program using function clauses and pattern matching.
+
+### Regular Expressions
+To define a regular expression literal in Elixir, `~r` is called a sigil and the braces `{ }` are delimiters for the regular expression itself.
+```bash
+~r{regexp}
+```
+
+The ~r is called a sigil and the braces { } are delimiters for the regular expression itself. For example, here's a regular expression that matches /bears?id=1, /lions?id=7, /tigers?id=100, and so on:
+```bash
+iex> regex = ~r{\/(\w+)\?id=(\d+)}
+```
+
+The example below matches a literal / character followed by one or more word characters, followed by the literal ?id= followed by one or more digits.
+```bash
+iex> regex = ~r{\/(\w+)\?id=(\d+)}
+iex> Regex.match?(regex, path)
+true
+
+iex> regex = ~r{\/(?<thing>\w+)\?id=(?<id>\d+)}
+iex> Regex.named_captures(regex, path)
+%{"id" => "1", "thing" => "bears"}`
+```
+
+## Files and Paths
+The `File` and `Path` modules define familiar functions for working with files and paths.
+
+You can expand the path to the pages directory relative to the directory of the current file (`__DIR__`) like so:
+```bash
+@pages_path Path.expand("../../pages", __DIR__)
+```
+
+If you're running the application using `iex -S mix`, you can optionally expand the path using a slightly different approach.  `File.cwd!` returns the current working directory. 
+```bash
+@pages_path Path.expand("pages", File.cwd!)
+```
+
+## Organizing Code
+
+### Import Options
+By default, when you use import it imports all the module's functions and macros into the current namespace.  You can use the only option to explicitly import specific functions.  Using only is optional, but it's recommended so as to avoid importing all the functions into the current namespace and potentially ending up with name collisions.
+```bash
+import Servy.Parser, only: [parse: 1]
+```
+
+Conversely, there's a rarely used except option to import all the functions except those that are specified.  Using the `:functions` atom imports only functions whereas using the `:macros` atom only imports macros. 
+```bash
+import SomeModule, only: :functions
+import SomeModule, only: :macros
 ```
