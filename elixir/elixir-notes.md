@@ -187,3 +187,158 @@ Conversely, there's a rarely used except option to import all the functions exce
 import SomeModule, only: :functions
 import SomeModule, only: :macros
 ```
+
+## Modeling with Structs
+
+### Keyword Lists
+Keywords lists are just a tiny dose of syntactic sugar.  Internally, keyword lists are represented as a list of tuples containing two values: an atom (the key) and the associated value.
+```bash
+# Keyword List
+[ method: "", path: "", resp_body: "", status: nil ]
+
+# How it looks internally
+[ {:method, ""}, {:path, ""}, {:resp_body, ""}, {:status, nil} ]
+```
+
+Keyword lists are most commonly used as a simple list of options. In contrast, maps are the go-to data structure for storing key/value pairs.
+
+### Updating Structs
+The syntax for updating a struct is just like updating a map.
+
+```bash
+# Verify that the argument is a Conv struct.
+%Conv{ method: "GET", path: "/wildthings" } = conv
+
+# Stipulate a Conv struct.
+# This verifies that the value being updated (conv) is indeed a struct of the type Conv, not a generic map.
+# This is yet another compile-time check that comes with using a struct as compared to a map. 
+%Conv{ conv | status: 200, resp_body: "Bears, Lions, Tigers" }
+```
+
+## Heads and Tails
+
+### Lists
+A list in Elixir is implemented as a series of linked lists.  The head is always the first element of the list.  The tail "points" or "links" to the list that consists of the head and tail of the remaining elements.  So, lists are by definition recursive data structures.
+
+The familiar way to make a list is by separating each element by a comma.
+```bash
+iex> nums = [1, 2, 3]
+[1, 2, 3]
+```
+
+But now you know that a list is either empty or it consists of a head and a tail which is itself a list.  It follows then that you can create the same list using the `[head | tail]` expression.
+```bash
+iex> nums = [1 | [2, 3]]
+[1, 2, 3]
+```
+
+In the same way, you can add elements to the head of a list (prepend) using the [head | tail] expression.
+```bash
+iex> [0 | nums]
+[0, 1, 2, 3]
+```
+
+### Accessing Head and Tail
+```bash
+iex> [head | tail] = [1, 2, 3]
+iex> head
+1
+iex> tail
+[2, 3]
+```
+
+The head and tail of a list can also be accessed with the functions hd and tl:
+```bash
+iex> nums = [1, 2, 3]
+
+iex> hd(nums)
+1
+
+iex> tl(nums)
+[2, 3]
+```
+
+## Recursion
+```elixir
+defmodule Recurse do
+  def loopy([head | tail]) do
+    IO.puts "Head: #{head} Tail: #{inspect(tail)}"
+    loopy(tail)
+  end
+
+  def loopy([]), do: IO.puts "Done!"
+end
+
+Recurse.loopy([1, 2, 3, 4, 5])
+```
+
+### Tail-Call Optimization
+Elixir performs tail-call optimization to keep the memory footprint of recursion to a minimum.  When the last thing a function does is call itself (a tail call), Elixir performs tail-call optimization.  This doesn't push any new frames onto the call stack, so no additional memory is consumed.
+```elixir
+defmodule Recurse do
+
+  # The triple/1 function is a public function which calls the private triple/2 
+  # function with the list of numbers and an accumulator (current_list) that 
+  # starts off as an empty list ([]).
+  def triple(list) do
+    triple(list, [])
+  end
+
+  # The first triple/2 function head matches a non-empty list of numbers and 
+  # calls itself (a tail call) with the list's tail and a new list where the 
+  # head is the original head multiplied by 3 and the tail is the current 
+  # accumulator list.
+  defp triple([head|tail], current_list) do
+    triple(tail, [head*3 | current_list])
+  end
+
+  # Finally, the second triple/2 function head (the terminal clause) matches an 
+  # empty list and returns the list of accumulated numbers reversed. It needs 
+  # to be reversed because each tripled number was added to the head of the 
+  # accumulator list: [head*3 | current_list].
+  defp triple([], current_list) do
+    current_list |> Enum.reverse()
+  end
+end
+
+IO.inspect Recurse.triple([1, 2, 3, 4, 5])
+```
+
+## Enum
+Enum provides a set of algorithms to work with enumerables.  In Elixir, an enumerable is any data type that implements the Enumerable
+protocol.  Lists (`[1, 2, 3]`), Maps (`%{foo: 1, bar: 2}`) and Ranges (`1..3`) are
+common data types used as enumerables.
+
+### Capturing Expressions
+You can use the `&` operator to capture named functions.  For example, below is an example of capturing the `String.upcase` function.
+```elixir
+> phrases = ["lions", "tigers", "bears", "oh my"]
+
+> Enum.map(phrases, &String.upcase(&1))
+["LIONS", "TIGERS", "BEARS", "OH MY"]
+```
+
+The `&` capture operator creates an anonymous function that calls `String.upcase`.  The `&1` is a placeholder for the first argument passed to the function.  It's shorthand for the below code.
+```elixir
+> Enum.map(phrases, fn(x) -> String.upcase(x) end)
+["LIONS", "TIGERS", "BEARS", "OH MY"]
+```
+
+You can also use the `&` operator to capture expressions.  Take an example where we triple a list of numbers by calling `map` with a list and an anonymous "tripler" function.
+```elixir
+> Enum.map([1, 2, 3], fn(x) -> x * 3 end)
+[3, 6, 9]
+
+# Shorthand version using the & capture operator
+> Enum.map([1, 2, 3], &(&1 * 3))
+[3, 6, 9]
+```
+
+Alternatively, you can capture the expression as an anonymous function, bind it to a variable, and then pass the function to the higher-order map function.
+```elixir
+> triple = &(&1 * 3)
+#Function<6.118419387/1 in :erl_eval.expr/5>
+
+> Enum.map([1, 2, 3], triple)
+[3, 6, 9]
+```
