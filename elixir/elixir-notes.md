@@ -473,3 +473,19 @@ use ExUnit.Case, async: true
 ```
 
 It's important to note that individual tests within the test case are always run serially. Setting async to true allows the test case as a whole to run in parallel with other test cases.  It's important to note that you won't be able to use this trick if a test case accesses shared state or resources with another test cases.
+
+## External Libraries
+You can add external dependencies in your project's `mix.exs` file (using a list of tuples).  They can then be installed using `mix deps.get`.
+
+For an update on version formatting, type `h Version` in an `iex` session to see a list of examples and explanations. 
+
+## Erlang |> Elixir
+Here's a summary of things to keep in mind when transcoding Erlang to Elixir:
+- Erlang atoms start with a lowercase letter, whereas Elixir atoms start with a colon (`:)`. For example, `ok` in Erlang becomes `:ok` in Elixir.
+- Erlang variables start with an uppercase letter, whereas Elixir variables start with a lowercase letter.  For example, `Socket` in Erlang becomes `socket` in Elixir.
+- Erlang modules are always referenced as atoms.  For example, `gen_tcp` in Erlang becomes `:gen_tcp` in Elixir.
+- Function calls in Erlang use a colon (`:`) whereas function calls in Elixir always us a dot (`.`).  For example, `gen_tcp:listen` in Erlang becomes `:gen_tcp.listen` in Elixir.
+- It's important to note that **Erlang strings aren't the same as Elixir strings**.  In Erlang, a double-quoted string is a list of characters whereas in Elixir a double-quoted string is a sequence of bytes (a binary).  Thus, double-quoted Erlang and Elixir strings aren't compatible.  So, if an Erlang function takes a string argument, you can't pass it an Elixir string.  Instead, Elixir has a character list which you can create using single-quotes rather than double-quotes.  For example, `'hello'` is a list of characters that's compatible with the Erlang string `"hello"`.
+
+## Web Server Sockets
+![Sockets](img/sockets.png)
