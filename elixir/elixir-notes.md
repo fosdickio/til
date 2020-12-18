@@ -489,3 +489,173 @@ Here's a summary of things to keep in mind when transcoding Erlang to Elixir:
 
 ## Web Server Sockets
 ![Sockets](img/sockets.png)
+
+## Concurrent, Isolated Processes
+The `spawn/1` function takes a zero-arity anonymous function.
+```elixir
+spawn(fn() -> serve(client_socket) end)
+```
+
+There's also a `spawn/3` function that takes the module name, the function name (as an atom), and the list of arguments passed to the function.  This is commonly referred to as referred to as MFA (for module, function, arguments).
+```elixir
+spawn(Servy.HttpServer, :start, [4000])
+```
+
+In either case, `spawn` creates a process and immediately returns the PID of that process.  The process that called `spawn` does not block; it continues execution.  Meanwhile, the spawned process runs its function concurrently, in the background.  When that function returns, the spawned process exits normally and the Erlang VM takes care of cleaning up its memory.
+
+### Spawning Multiple Processes
+Just how lightweight and fast is it to spawn a single process? We're talking an initial memory footprint of 1-2 KB and a few microseconds to spawn. You can spawn thousands of processes on a single machine without the Erlang VM breaking a sweat.
+```elixir
+iex> Enum.map(1..10_000, fn(x) -> spawn(fn -> IO.puts x * x end) end)
+```
+
+### Erlang VM Observer
+You can start the [Observer GUI](https://erlang.org/doc/apps/observer/observer_ug.html) using the below command.
+```bash
+iex> :observer:start
+```
+
+You can use the `inspect` function to print the PID of the current process.
+```elixir
+IO.puts "#{inspect self()}: Working on it!\n"
+```
+
+### Getting System Info
+```elixir
+# Get current process id
+iex> self()
+
+# 2 ways to count the number of processes
+iex> Process.list |> Enum.count
+iex> :erlang.system_info(:process_count)
+```
+
+## Sending and Receiving Messages
+```elixir
+caller_pid = self()
+spawn(fn -> send(caller_pid, {:result, "My message"}) end)
+Process.info(caller_pid, :messages)
+receive do {:result, message} -> message end
+```
+
+`flush` consumes all the messages in the `iex` process' mailbox and prints them out.  It comes in handy when you're playing around in the `iex` shell and don't want to go through the trouble of receiving all the messages.
+```elixir
+iex> flush()
+```
+
+### Processes
+- They are lightweight and fast to spawn
+- They run concurrently, and even in parallel if you have multiple CPU cores
+- They are isolated from other processes
+- They don't share anything with other processes
+- They have their own private mailbox
+- They communicate with other processes only by sending and receiving messages
+
+### Scheduler
+The Erlang VM scheduler allocates a slice of CPU time to a process. And when that time is up, the scheduler pre-empts (suspends) the running process and allocates time to another process. In this way, the scheduler tries its best to be fair to all processes. 
+
+Suppose during its allocated time that a process calls `receive` and has to wait for a message to arrive.  The scheduler knows that it would be a waste of precious CPU cycles to continue allocating time to that blocked process.  So, the scheduler pre-empts (suspends) the blocked process before it's scheduled time is up.  That way, other processes that want to do actual work aren't held up by a process that's just waiting around.
+
+The same is true for a process that calls `:timer.sleep` or runs an I/O operation such as `File.read`.  There is no sense in giving that process any more CPU time.  The scheduler dutifully pre-empts the process and then resumes it when the process wakes back up or finishes the I/O operation.
+
+### Send a Request to an API
+```elixir
+iex> {:ok, response} = HTTPoison.get "https://jsonplaceholder.typicode.com/users/1"
+
+iex> response.body
+"{
+  "id": 1,
+  ...
+}"
+
+body_map = Poison.Parser.parse!(response.body, %{})
+
+iex> city = body_map |> Map.get("address") |> Map.get("city")
+"Gwenborough"
+
+iex> city = get_in(body_map, ["address", "city"])
+"Gwenborough"
+```
+
+## Asynchronous Tasks
+```elixir
+task = Task.async(fn -> Servy.Tracker.get_location("bigfoot") end)
+
+task = Task.async(Servy.Tracker, :get_location, ["bigfoot"])
+```
+
+### After Clauses
+```elixir
+def get_result(pid) do
+  receive do
+    {^pid, :result, value} -> value
+  after 2000 ->
+    raise "Timed out!"
+  end
+end
+```
+
+### Task Timeouts
+By default, `Task.await` has a built-in timeout of 5 seconds.  If the task doesn't complete within that time, an exception is raised.  You can override the default timeout by passing a specific timeout value (in milliseconds) as the second argument to `Task.await`.
+```elixir
+iex> task = Task.async(fn -> :timer.sleep(7000); "Done!" end)
+
+iex> Task.await(task, 7000)
+"Done!"
+```
+
+### Running a Task with a Cut-Off Time
+`Task.await` waits for a message to arrive, you can only call `Task.await` once for any given task.  In certain situations you may want to be able to check if a long-running task has finished.  That's where `Task.yield` comes in handy.
+
+The first time we call `Task.yield`, it starts waiting for 5 seconds and because a message doesn't arrive by that cut-off time, `nil` is returned. Then we call `Task.yield` again which starts waiting for 5 seconds and, because a message arrives during that time, the tuple `{:ok, "Done"}` is returned.  In this way, you can check if a long-running task has finished or not and act accordingly.
+```elixir
+case Task.yield(task, 5000)
+  {:ok, result} ->
+    result
+  nil ->
+    Logger.warn "Timed out!"
+    Task.shutdown(task)
+end
+```
+
+In this example, if a message doesn't arrive within the 5 second cut-off, then we shut down the task by calling `Task.shutdown`.  If a message arrives while shutting down the task, then `Task.shutdown` returns `{:ok, result}`.  Otherwise, it returns `nil`.
+
+## Stateful Server Processes
+
+### Finding Registered Processes
+```elixir
+iex> Process.whereis(:pledge_server)
+nil
+
+iex> Process.register(pid, :pledgy)
+true
+
+iex> Process.whereis(:pledgy)
+#PID<0.158.0>
+```
+
+### Agents
+The [`Agent` module](https://hexdocs.pm/elixir/Agent.html) is a simple wrapper around a server process that stores state and offers access to that state through a thin client interface.  To start an agent, you call the `Agent.start` function and pass it a function that returns the initial state.
+```elixir
+iex> {:ok, agent} = Agent.start(fn -> [] end)
+{:ok, #PID<0.90.0>}
+```
+
+That spawns a process that's holding onto an Elixir list in its memory.  Notice the agent variable is bound to a PID.
+
+To add a pledge to the agent's state, you call the `Agent.update` function with a PID and a function that updates the state.
+```elixir
+iex> Agent.update(agent, fn(state) -> [ {"larry", 10} | state ] end)
+:ok
+```
+
+Notice the function is passed the current state which the function then transforms into the new state. Let's add another pledge to the head of the list just to make things interesting:
+```elixir
+iex> Agent.update(agent, fn(state) -> [ {"moe", 20} | state ] end)
+:ok
+
+Then to retrieve the current state, you call the `Agent.get` function with a PID and a function that returns the state.
+```elixir
+iex> Agent.get(agent, fn(state) -> state end)
+[{"moe", 20}, {"larry", 10}]
+```
