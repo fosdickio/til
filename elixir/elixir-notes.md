@@ -659,3 +659,41 @@ Then to retrieve the current state, you call the `Agent.get` function with a PID
 iex> Agent.get(agent, fn(state) -> state end)
 [{"moe", 20}, {"larry", 10}]
 ```
+
+## OTP GenServer
+
+### Task, Agent, or GenServer?
+- Use a `Task` if you want to perform a one-off computation or query asynchronously.
+- Use an `Agent` if you just need a simple process to hold state.
+- Use a `GenServer` if you need a long-running server process that store states and performs work concurrently.
+- Use a dedicated `GenServer` process if you need to serialize access to a shared resource or service used by multiple concurrent processes.
+- Use a `GenServer` process if you need to schedule background work to be performed on a periodic interval.
+
+### GenServer Callback Functions
+Erlang's `gen_server` behavior expects the callback module to implement six callback functions.  Elixir's `GenServer` module conveniently provides default implementations of all six callback functions.  When you add `use GenServer `to a module, the default callbacks are injected into the module.  You then add application-specific behavior by overriding any of the default implementations. 
+
+### Debugging and Tracing
+Erlang has a `sys` module that's like a Swiss Army Knife for debugging processes.
+```elixir
+iex> :sys.get_state(pid)
+%Servy.PledgeServer.State{cache_size: 3, pledges: [{"wilma", 15}, {"fred", 25}]}
+
+iex> :sys.trace(pid, true)
+:ok
+
+iex> Servy.PledgeServer.create_pledge("moe", 20)
+*DBG* pledge_server got call {create_pledge,<<"moe">>,20} from <0.152.0>
+*DBG* pledge_server sent <<"pledge-275">> to <0.152.0>, new state #{'__struct__'=>'Elixir.Servy.PledgeServer.State',cache_size=>3,pledges=>[{<<109,111,101>>,20},{<<108,97,114,114,121>>,10},{<<119,105,108,109,97>>,15}]}
+
+iex> :sys.get_status(pid)
+{:status, #PID<0.169.0>, {:module, :gen_server},
+ [["$initial_call": {Servy.PledgeServer, :init, 1},
+   "$ancestors": [#PID<0.167.0>, #PID<0.63.0>]], :running, #PID<0.169.0>,
+  [trace: true],
+  [header: 'Status for generic server pledge_server',
+   data: [{'Status', :running}, {'Parent', #PID<0.169.0>},
+    {'Logged events', []}],
+   data: [{'State',
+     %Servy.PledgeServer.State{cache_size: 3,
+      pledges: [{"wilma", 15}, {"fred", 25}]}}]]]}
+```
