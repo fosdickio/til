@@ -697,3 +697,91 @@ iex> :sys.get_status(pid)
      %Servy.PledgeServer.State{cache_size: 3,
       pledges: [{"wilma", 15}, {"fred", 25}]}}]]]}
 ```
+
+## Linking Processes
+
+### Normal vs. Abnormal Process Termination
+When a process terminates, whether normally (it finishes doing all its work) or abnormally (due to a crash), it notifies the linked process by sending it an exit signal.
+
+In the case of a process terminating normally, the exit signal reason is always the atom `:normal`.  Since the process exited normally, the linked process does not terminate.
+
+In the case of a process terminating abnormally, the exit signal reason will be anything other than the atom `:normal`.  By default, if the exit signal indicates that the process terminated abnormally, the linked process terminates with the same reason unless the linked process is trapping exits.  If it's trapping exits, then the exit signal is converted to a message that's sent to the mailbox of the linked process. 
+
+### Monitoring a Process
+Sometimes a process needs to monitor another process to detect if it crashes (or terminates normally), but you don't want their fates to be tied together.  That's where using a monitor can be handy.  Whereas a link is bidirectional, a monitor is unidirectional.
+
+For example, let's say we have a process chugging away.  We want the `iex` process to passively monitor that process without linking itself to it.  To do that, use `Process.monitor/1` rather than `Process.link/1`.
+```elixir
+iex> pid = spawn(Servy.HttpServer, :start, [4000])
+
+iex> Process.monitor(pid)
+#Reference<0.2181247014.667942918.240804>
+
+iex> Process.exit(pid, :kaboom)
+
+iex> flush()
+{:DOWN, #Reference<0.2181247014.667942918.240804>, :process, #PID<0.323.0>,
+ :kaboom}
+```
+
+The `iex` process received a notification message in its mailbox.  The message includes the atom `:DOWN`, the monitor reference we saw earlier, the PID of the process that terminated, and a reason that indicates why the process terminated. 
+
+## Fault Recovery with OTP Supervisors
+
+### Overriding Child Spec Fields
+```elixir
+# Option #1
+use GenServer, restart: :temporary
+
+# Option #2
+# This option opens the door to making it a multi-clause function.
+def child_spec(arg) do
+  %{
+    id: __MODULE__,
+    start: {__MODULE__, :start_link, [arg]},
+    restart: :permanent,
+    shutdown: 5000,
+    type: :worker
+  }
+end
+```
+
+## Final OTP Application
+
+```elixir
+# Run an application with it's default environment
+mix run --no-halt
+```
+
+### Passing Environment Variables
+The --erl option is the way you pass flags (switches) to the Erlang VM.  Using `-servy port 5000` tells the VM to set the port environment parameter to the value 5000 for the servy application.  Using this same form, you can set environment parameters for any application running in the VM.
+```elixir
+elixir --erl "-servy port 5000" -S mix run --no-halt
+```
+
+It's also worth mentioning that you can also programmatically override any application environment parameter using the `Application.put_env/3` function.
+```elixir
+Application.put_env(:servy, :port, 5000)
+```
+
+### Configuration Techniques
+You can add the default port to the application's environment in the `mix.exs` file.
+```elixir
+def application do
+  [
+    extra_applications: [:logger],
+    mod: {Servy, []},
+    env: [port: 3000]
+  ]
+end
+```
+
+You may also add the line to the `config/config.exs` file.
+```elixir
+config :servy, port: 3000
+```
+
+When you `mix run` it loads `config.exs`.  However, if this application is run as a dependency of another application, then the contents of `config.exs` will have no effect because `config.exs` is never loaded.  In other words, any configuration changes made to `config.exs` are restricted to this project.
+
+### Creating a Project with a Supervisor
+When you create a new project using `mix new`, you can pass it the `--sup` option and Mix will generate an `Application` callback module that starts a supervisor. 
