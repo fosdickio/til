@@ -100,3 +100,59 @@ const thisIsNotHoisted = function() {
 - All variables and functions are actually parameters and methods on the global object
   - Browser global object is the `window` object
   - Node.js global object is the `global` object
+
+## Closures
+- Functions that refer to variables declared by parent function still have access to those variables
+- This is possible because of JavaScript’s scoping
+
+## Immediately Invoked Function Expression
+- A function expression that gets invoked immediately
+- Creates closure
+- Doesn’t add to or modify global object
+
+## First-Class Functions
+- Functions are treated the same way as any other value
+  - Can be assigned to variables, array values, object values
+  - Can be passed as arguments to other functions
+  - Can be returned from functions
+- Allows for the creation of higher-order functions
+  - Either takes one or more functions as arguments or returns a function
+  - `map()`, `filter()`, `reduce()`
+
+## Synchronous? Async? Single-Threaded?
+- JavaScript is a single-threaded, synchronous language
+- JavaScript has functions that act asynchronously
+
+### Asynchronous JavaScript
+- Execution stack
+- Browser APIs
+- Function queue
+- Event loop
+- Asynchronous functions
+  - `setTimeout()`
+  - `XMLHttpRequest()`, `jQuery.ajax()`, `fetch()`
+  - Database calls
+
+### Callbacks
+- Control flow with asynchronous calls
+- Execute function once asynchronous call returns value
+
+### Promises
+- Alleviate "callback hell"
+- Allows you to write code that assumes a value is returned within a success function
+- Only needs a single error handler
+
+### Async/Await
+- Introduced in ES2017
+- Allows people to write async code as if it were synchronous
+
+## `this`
+- Refers to an object that’s set at the creation of a new execution context (function invocation)
+- In the global execution context, it refers to the global object
+- If the function is called as a method of an object, `this` is bound to the object the method is called on
+
+## Document Object Model
+- When a browser renders HTML for a webpage, the HTML is defined in a tree-like structure
+  - Browsers construct this tree in memory before painting the page
+  - This tree is called the Document Object Model
+- The DOM can be modified using JavaScript
