@@ -156,3 +156,6 @@ const thisIsNotHoisted = function() {
   - Browsers construct this tree in memory before painting the page
   - This tree is called the Document Object Model
 - The DOM can be modified using JavaScript
+
+## Classes
+- Keywords: `new`, `constructor`, `extends`, `super`
