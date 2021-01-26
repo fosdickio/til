@@ -12,8 +12,8 @@
 - Unknown cause of failures
 - Must be explicitly handled
 
-## Goals of a RPC System
-![Goals of a RPC System](img/rpc-goals.png)
+## Goals of an RPC System
+![Goals of an RPC System](img/rpc-goals.png)
 
 ## Role of RPC
 - Service registration mechanism
@@ -27,11 +27,11 @@
   - Timeout and retry for transient
   - Timeout and return appropriate error messsage otherwise
 
-## Architecture of a RPC System
-![Architecture of a RPC System](img/rpc-system-architecture.png)
+## Architecture of an RPC System
+![Architecture of an RPC System](img/rpc-system-architecture.png)
 
-## Anatomy of a RPC Call
-![Anatomy of a RPC Call](img/rpc-call-anatomy.png)
+## Anatomy of an RPC Call
+![Anatomy of an RPC Call](img/rpc-call-anatomy.png)
 
 ## Invocation Semantics of RPC Operations
 ![Semantics of RPC](img/rpc-semantics.png)
