@@ -118,3 +118,28 @@
     - Snapshot is taken before message is received
 
 ![Communication-Induced Checkpoints](img/communication-induced-checkpoint.png)
+
+## Logging
+
+### Benefits of Logging
+
+- Logging vs. Checkpointing = Compute vs. I/O
+- Logs at each node must allow consistent state to be rebuilt
+
+### Approaches to Logging
+
+- **Pessimistic:** log everything to persistent storage before allowing event to propagate and commit
+- **Optimistic:** assume log will be persistent before failure, but make it possible to remove effects if abort needed
+- **Causality-tracking:** ensure causally related events are deterministically recorded
+
+## Which Method to Use?
+
+- Depends on a number offactors:
+  1.  Workload characteristics?
+  2.  Failure characteristics?
+  3.  System characteristics?
+      - Cost/overhead of communication?
+      - Cost/overhead of stable storage?
+      - System scale?
+
+![Which Method to Use?](img/rollback-recovery-comparison.png)
