@@ -29,6 +29,8 @@ yarn add web3
 
 ## Calling Contract Functions
 
+- In Solidity, when you declare a variable `public`, it automatically creates a `public` "getter" function with the same name
+
 ### Call
 
 - `call` is used for `view` and `pure` functions
