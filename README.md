@@ -2,11 +2,12 @@
 
 ![Build README.md](https://github.com/fosdickio/til/workflows/Build%20README.md/badge.svg)
 
-This repository includes Markdown files which cover hints and tips on a wide range of topics.  Each file serves as a quick reference guide on an individual topic within a category which can be used at a later date.  I've made the repository public in hopes that someone else might also find them useful.
+This repository includes Markdown files which cover hints and tips on a wide range of topics. Each file serves as a quick reference guide on an individual topic within a category which can be used at a later date. I've made the repository public in hopes that someone else might also find them useful.
 
-There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one.  The TIL list below was dynamically generated using GitHub Actions.
+There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one. The TIL list below was dynamically generated using GitHub Actions.
 
 <!-- TILs start -->
+
 ## concurrency
 
 - [Program vs. Process vs. Thread](https://github.com/fosdickio/til/blob/main/concurrency/program-vs-process-vs-thread.md) (2020-08-20)
@@ -34,7 +35,7 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 
 ## ethereum
 
-- [Web3.js Notes](https://github.com/fosdickio/til/blob/main/ethereum/web3.js-notes.md) (2021-07-07)
+- [Web3.js Notes](https://github.com/fosdickio/til/blob/main/ethereum/web3.js-notes.md) (2021-06-18)
 
 ## git
 
@@ -79,9 +80,9 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 
 ## react
 
-- [React Notes](https://github.com/fosdickio/til/blob/main/react/react-notes.md) (2021-07-12)
+- [React Notes](https://github.com/fosdickio/til/blob/main/react/react-notes.md) (2021-01-06)
 - [React Hooks](https://github.com/fosdickio/til/blob/main/react/react-hooks.md) (2021-07-12)
-- [React Native Notes](https://github.com/fosdickio/til/blob/main/react/react-native-notes.md) (2021-07-12)
+- [React Native Notes](https://github.com/fosdickio/til/blob/main/react/react-native-notes.md) (2021-01-14)
 
 ## rust
 
