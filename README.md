@@ -7,7 +7,6 @@ This repository includes Markdown files which cover hints and tips on a wide ran
 There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one. The TIL list below was dynamically generated using GitHub Actions.
 
 <!-- TILs start -->
-
 ## concurrency
 
 - [Program vs. Process vs. Thread](https://github.com/fosdickio/til/blob/main/concurrency/program-vs-process-vs-thread.md) (2020-08-20)
@@ -33,17 +32,29 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 - [Phoenix Notes](https://github.com/fosdickio/til/blob/main/elixir/phoenix-notes.md) (2020-12-17)
 - [Elixir Notes](https://github.com/fosdickio/til/blob/main/elixir/elixir-notes.md) (2020-12-22)
 
-## ethereum
-
-- [Web3.js Notes](https://github.com/fosdickio/til/blob/main/ethereum/web3.js-notes.md) (2021-06-18)
-
 ## git
 
 - [Git Snippets](https://github.com/fosdickio/til/blob/main/git/git-snippets.md) (2020-08-26)
 
 ## github-actions
 
-- [Automate the Pushing of Commits to a Repository](https://github.com/fosdickio/til/blob/main/github-actions/automate-commit-pushes.md) (2020-08-14)
+- [Automate the Pushing of Commits to a Repository](https://github.com/fosdickio/til/blob/main/github-actions/automate-commit-pushes.md) (2020-09-12)
+
+## go
+
+- [Go Notes](https://github.com/fosdickio/til/blob/main/go/go-notes.md) (2020-12-03)
+
+## graphql
+
+- [GraphQL Notes](https://github.com/fosdickio/til/blob/main/graphql/graphql-notes.md) (2020-12-08)
+
+## javascript
+
+- [React Notes](https://github.com/fosdickio/til/blob/main/javascript/react-notes.md) (2021-07-12)
+- [Web3.js Notes](https://github.com/fosdickio/til/blob/main/javascript/web3.js-notes.md) (2021-07-12)
+- [The Document Object Model](https://github.com/fosdickio/til/blob/main/javascript/14-the-document-object-model.md) (2021-07-07)
+- [JavaScript Notes](https://github.com/fosdickio/til/blob/main/javascript/javascript-notes.md) (2021-01-06)
+- [React Native Notes](https://github.com/fosdickio/til/blob/main/javascript/react-native-notes.md) (2021-07-12)
 
 ## kubernetes
 
@@ -51,8 +62,8 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 
 ## network-engineering
 
-- [Layered Network Model](https://github.com/fosdickio/til/blob/main/network-engineering/layered-network-model.md) (2020-08-23)
 - [Network Engineering Notes](https://github.com/fosdickio/til/blob/main/network-engineering/network-engineering-notes.md) (2020-08-23)
+- [Layered Network Model](https://github.com/fosdickio/til/blob/main/network-engineering/layered-network-model.md) (2020-08-23)
 
 ## openssl
 
@@ -61,15 +72,13 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 ## python
 
 - [Python Snippets](https://github.com/fosdickio/til/blob/main/python/python-snippets.md) (2020-08-27)
-- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md) (2020-09-02)
-- [Python for Finance](https://github.com/fosdickio/til/blob/main/python/python-for-finance.md) (2020-09-02)
 - [NumPy Snippets](https://github.com/fosdickio/til/blob/main/python/numpy-snippets.md) (2020-08-28)
+- [Python for Finance](https://github.com/fosdickio/til/blob/main/python/python-for-finance.md) (2020-09-12)
+- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md) (2020-09-02)
 
 ## react
 
-- [React Notes](https://github.com/fosdickio/til/blob/main/react/react-notes.md) (2021-01-06)
 - [React Hooks](https://github.com/fosdickio/til/blob/main/react/react-hooks.md) (2021-07-12)
-- [React Native Notes](https://github.com/fosdickio/til/blob/main/react/react-native-notes.md) (2021-01-14)
 
 ## rust
 
@@ -85,10 +94,9 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 
 ## system-design
 
-- # [System Design Notes](https://github.com/fosdickio/til/blob/main/system-design/system-design-notes.md) (2020-12-03)
+- [System Design Notes](https://github.com/fosdickio/til/blob/main/system-design/system-design-notes.md) (2020-12-03)
 
 ## visual-studio-code
 
 - [Markdown Keyboard Shortcuts](https://github.com/fosdickio/til/blob/main/visual-studio-code/markdown-keyboard-shortcuts.md) (2020-08-26)
-
 <!-- TILs end -->
