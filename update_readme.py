@@ -81,8 +81,7 @@ def update_readme():
     index = ["<!-- TILs start -->"]
     for topic, rows in by_topic.items():
         index.append("## {}\n".format(topic))
-        rows.sort()
-        for row in rows:
+        for row in rows.sort():
             index.append("- [{}]({}) ({})".format(row["title"], row["url"], row["updated"].split("T")[0]))
         index.append("")
     if index[-1] == "":
