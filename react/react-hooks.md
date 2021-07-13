@@ -210,4 +210,4 @@ function FriendStatus(props) {
 }
 ```
 
-The state of each component is completely independent. Hooks are a way to reuse stateful logic, not state itself. In fact, each _call_ to a Hook has a completely isolated state — so you can even use the same custom Hook twice in one component.
+The state of each component is completely independent. Hooks are a way to reuse stateful logic, not state itself. In fact, each _call_ to a hook has a completely isolated state — so you can even use the same custom Hook twice in one component.

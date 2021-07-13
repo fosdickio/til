@@ -14,7 +14,7 @@ Each DOM node object has a `nodeType` property, which contains a code (number) t
 
 DOM nodes contain a wealth of links to other nearby nodes. Every node has a `parentNode` property that points to the node it is part of, if any. Likewise, every element node (node type 1) has a `childNodes` property that points to an array-like object holding its children.
 
-![Links between DOM nodes](img/14-dom-tree.svg)
+![Links Between DOM Nodes](img/14-dom-tree.svg)
 
 The `firstChild` and `lastChild` properties point to the first and last child elements or have the value null for nodes without children. Similarly, `previousSibling` and `nextSibling` point to adjacent nodes, which are nodes with the same parent that appear immediately before or after the node itself. For a first child, `previousSibling` will be null, and for a last child, `nextSibling` will be null.
 
