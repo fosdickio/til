@@ -4,7 +4,7 @@
 
 This repository includes Markdown files which cover hints and tips on a wide range of topics. Each file serves as a quick reference guide on an individual topic within a category which can be used at a later date. I've made the repository public in hopes that someone else might also find them useful.
 
-There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one. The TIL list below was dynamically generated using GitHub Actions.
+There are <!-- Count starts -->39<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one. The TIL list below was dynamically generated using GitHub Actions.
 
 <!-- TILs start -->
 ## concurrency
@@ -32,6 +32,10 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 - [Phoenix Notes](https://github.com/fosdickio/til/blob/main/elixir/phoenix-notes.md) (2020-12-17)
 - [Elixir Notes](https://github.com/fosdickio/til/blob/main/elixir/elixir-notes.md) (2020-12-22)
 
+## ethereum
+
+- [Web3.js Notes](https://github.com/fosdickio/til/blob/main/ethereum/web3.js-notes.md) (2021-07-12)
+
 ## git
 
 - [Git Snippets](https://github.com/fosdickio/til/blob/main/git/git-snippets.md) (2020-08-26)
@@ -50,11 +54,9 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 
 ## javascript
 
-- [React Notes](https://github.com/fosdickio/til/blob/main/javascript/react-notes.md) (2021-07-12)
-- [Web3.js Notes](https://github.com/fosdickio/til/blob/main/javascript/web3.js-notes.md) (2021-07-12)
-- [The Document Object Model](https://github.com/fosdickio/til/blob/main/javascript/14-the-document-object-model.md) (2021-07-07)
+- [The Document Object Model](https://github.com/fosdickio/til/blob/main/javascript/14-the-document-object-model.md) (2021-07-13)
+- [Handling Browser Events](https://github.com/fosdickio/til/blob/main/javascript/15-handling-events.md) (2021-07-13)
 - [JavaScript Notes](https://github.com/fosdickio/til/blob/main/javascript/javascript-notes.md) (2021-01-06)
-- [React Native Notes](https://github.com/fosdickio/til/blob/main/javascript/react-native-notes.md) (2021-07-12)
 
 ## kubernetes
 
@@ -78,7 +80,11 @@ There are <!-- Count starts -->36<!-- Count ends --> TILs in this repository so 
 
 ## react
 
-- [React Hooks](https://github.com/fosdickio/til/blob/main/react/react-hooks.md) (2021-07-12)
+- [Testing React](https://github.com/fosdickio/til/blob/main/react/testing-react.md) (2021-07-12)
+- [Redux Notes](https://github.com/fosdickio/til/blob/main/react/redux-notes.md) (2021-07-12)
+- [React Notes](https://github.com/fosdickio/til/blob/main/react/react-notes.md) (2021-07-12)
+- [React Hooks](https://github.com/fosdickio/til/blob/main/react/react-hooks.md) (2021-07-13)
+- [React Native Notes](https://github.com/fosdickio/til/blob/main/react/react-native-notes.md) (2021-07-12)
 
 ## rust
 
