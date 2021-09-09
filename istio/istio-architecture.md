@@ -16,7 +16,7 @@ Istio provides these capabilities by adding a sidecar proxy which is a helper pr
 
 Istio architecture consists of a control plane responsible for configuring mesh traffic and a data plane composed of sidecar proxies to mediate and control traffic flow. This split in architecture allows allows extensibility and separation of concerns whereby data plane can scale with your application workloads independent of the control plane. The following diagram depicts the various components of Istio architecture and how the traffic interception works within the mesh.
 
-![Istio Architecture](img/istio-1.png)
+![Istio Architecture](img/istio-architecture-1.png)
 
 - **Data Plane**: As mentioned above, workloads in Istio are augmented by injecting a dedicated intelligent sidecar proxy. Instead of calling services directly over the network, each workload calls its local sidecar proxy, which in turn encapsulates the complexities of the service-to-service exchange. Additionally, Istio also provides an ingress/egress gateway to manage traffic into and out of your cluster. This interconnected set of proxies in Istio constitute the data plane.
   - Istio uses the [Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/) as its data plane component. Keep in mind that because Istio is designed to be proxy-agnostic, other proxies may be used in the future in place of Envoy. Envoy is an extensible cloud native proxy that supports network protocols like HTTP 1.1, HTTP 2, gRPC, and TCP, among others, and a dynamic way to reload configuration and extension mechanisms to add new protocol support.
@@ -46,4 +46,4 @@ This section provides an overview of core components used in Istio’s data and 
 
 The following diagram shows where the ingress gateway fits into the architecture and how the traffic from the users outside of your cluster is routed via the ingress gateway to workloads within the mesh.
 
-![Istio Ingress Gateway](img/istio-2.png)
+![Istio Ingress Gateway](img/istio-architecture-2.png)
