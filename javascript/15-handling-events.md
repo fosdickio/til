@@ -53,7 +53,7 @@ The `removeEventListener` method (called with arguments similar to `addEventList
 
 To unregister a handler, you'll want to give the function a name to be able to pass the same function value to both methods.
 
-## Event objects
+## Event Objects
 
 Event handler functions are passed the _event_ object as an argument, which holds additional information about the event. For example, if we want to know _which_ mouse button was pressed, we can look at the event object's `button` property.
 
