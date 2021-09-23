@@ -109,3 +109,30 @@ The `String` type represents a sequence of characters in double quotes.
 ```kotlin
 val creditCardNumber = "1234 5678 9012 3456"
 ```
+
+## Increment and Decrement
+
+### Prefix and Postfix
+
+```kotlin
+var a = 10
+val b = ++a
+println(a)  // a = 11
+println(b)  // b = 11
+
+var a = 10
+val b = a++
+println(a)  // a = 11
+println(b)  // b = 10
+```
+
+### Order of Precedence
+
+Below is list of operations in decreasing order of priority:
+
+1. Parentheses ( (expr) );
+2. Postfix increment/decrement ( expr++, expr--);
+3. Unary plus/minus, prefix increment/decrement ( -expr, ++expr, --expr );
+4. Multiplication, division, and modulus ( \*, /, % );
+5. Addition and subtraction ( +, - );
+6. Assignment operations ( =, +=, -=, \*=, /=, %= ).
