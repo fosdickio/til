@@ -110,6 +110,25 @@ The `String` type represents a sequence of characters in double quotes.
 val creditCardNumber = "1234 5678 9012 3456"
 ```
 
+#### String Templates
+
+To add a variable value to a string, write the dollar sign `$` before a variable name.
+
+```kotlin
+val city = "Paris"
+val temp = "24"
+
+println("The temperature in $city is $temp degrees Celsius.")
+```
+
+You can use string templates to put the result of an arbitrary expression in a string. To do that, include the entire expression in curly braces `{...}` after the dollar sign `$`.
+
+```kotlin
+// {language.length} is an expression that will be evaluated
+val language = "Kotlin"
+println("$language has ${language.length} letters in the name")
+```
+
 ## Increment and Decrement
 
 ### Prefix and Postfix
