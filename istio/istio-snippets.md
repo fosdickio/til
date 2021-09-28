@@ -30,7 +30,7 @@ Verify that the `STATUS` column of all the pods is `Running`. You should also ve
 
 Note that it might take up to a few minutes for all the pods to be in running state, so wait before proceeding to the next verification step.
 
-You can verify that the correct versions of all components (control and data plane) are running in your cluster by using the istioctl version command. For example, if version 1.9.1 was installed, you should see the following output:
+You can verify that the correct versions of all components (control and data plane) are running in your cluster by using the `istioctl` version command. For example, if version 1.9.1 was installed, you should see the following output:
 
 ```sh
 $ istioctl version
