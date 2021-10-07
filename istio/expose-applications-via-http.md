@@ -121,7 +121,7 @@ An HTTP route defined with no matchers is called a default route. There should o
 
 Users should now be able to access the application from the browser at `http://$INGRESS`.
 
-## Expose a New Version of the Frontend Microservice
+## Expose a New Version of a Service
 
 This section details how to deploy a new version of the frontend microservice and uses Istio’s traffic management capabilities to expose the new functionality to selected users. This is important because:
 
