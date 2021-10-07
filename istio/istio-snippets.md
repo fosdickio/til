@@ -44,17 +44,3 @@ Verify that Istio is installed correctly and all the checks are passing:
 ```sh
 $ istioctl verify-install
 ```
-
-## Configure Istio Ingress Gateway
-
-Check that the service type of `istio-ingressgateway` is `LoadBalancer`.
-
-```sh
-$ kubectl -n istio-system get svc istio-ingressgateway -o jsonpath='{.spec.type}'
-```
-
-You need to be able to access the `istio-ingressgateway` service from outside your cluster. You can check that status of the external IP of the `istio-ingressgateway` service by issuing the following command:
-
-```sh
-$ kubectl -n istio-system get svc istio-ingressgateway
-```
