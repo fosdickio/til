@@ -4,7 +4,7 @@
 
 This repository includes Markdown files which cover hints and tips on a wide range of topics. Each file serves as a quick reference guide on an individual topic within a category which can be used at a later date. I've made the repository public in hopes that someone else might also find them useful.
 
-There are <!-- Count starts -->52<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one. The TIL list below was dynamically generated using GitHub Actions.
+There are <!-- Count starts -->54<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one. The TIL list below was dynamically generated using GitHub Actions.
 
 <!-- TILs start -->
 ## c
@@ -65,6 +65,7 @@ There are <!-- Count starts -->52<!-- Count ends --> TILs in this repository so 
 
 ## java
 
+- [The Java Language](https://github.com/fosdickio/til/blob/main/java/04-the-java-language.md) (2021-10-15)
 - [Java Tools](https://github.com/fosdickio/til/blob/main/java/03-java-tools.md) (2021-10-05)
 
 ## javascript
@@ -75,6 +76,7 @@ There are <!-- Count starts -->52<!-- Count ends --> TILs in this repository so 
 - [Drawing On Canvas](https://github.com/fosdickio/til/blob/main/javascript/17-drawing-on-canvas.md) (2021-09-09)
 - [Handling Browser Events](https://github.com/fosdickio/til/blob/main/javascript/15-handling-events.md) (2021-09-09)
 - [HTTP and Forms](https://github.com/fosdickio/til/blob/main/javascript/18-http-and-forms.md) (2021-09-09)
+- [Real-Time Javascript](https://github.com/fosdickio/til/blob/main/javascript/real-time-javascript.md) (2021-10-07)
 
 ## kotlin
 
