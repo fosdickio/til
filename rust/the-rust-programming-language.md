@@ -68,6 +68,12 @@ $ cargo check
 
 - `&` indicates that this argument is a reference
   - This gives you a way to let multiple parts of your code access one piece of data without needing to copy that data into memory multiple times
+- The `trim` method on a `String` instance will eliminate any whitespace at the beginning and end
+- The `parse` method on strings converts a string to another type
+
+```rust
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+```
 
 ### Variables and Mutability
 
@@ -140,4 +146,113 @@ error: could not compile `variables` due to previous error
 
 ### Data Types
 
--
+#### Scalar Types
+
+- A scalar type represents a single value
+- Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters
+
+##### Integer Types
+
+| Length  | Signed  | Unsigned |
+| ------- | ------- | -------- |
+| 8-bit   | `i8`    | `u8`     |
+| 16-bit  | `i16`   | `u16`    |
+| 32-bit  | `i32`   | `u32`    |
+| 64-bit  | `i64`   | `u64`    |
+| 128-bit | `i128`  | `u128`   |
+| arch    | `isize` | `usize`  |
+
+- Each signed variant can store numbers from -(2^(n-1)) to (2^(n-1) - 1) inclusive, where n is the number of bits that variant uses
+  - Example: an `i8` can store numbers from -(2^7) to (2^7 - 1), which equals -128 to 127
+- Unsigned variants can store numbers from 0 to 2^n - 1
+  - Example: a u8 can store numbers from 0 to 2^8 - 1, which equals 0 to 255
+- The `isize` and `usize` types depend on the architecture of the computer your program is running on
+  - 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture
+
+| Number literals | Example       |
+| --------------- | ------------- |
+| Decimal         | `98_222`      |
+| Hex             | `0xff`        |
+| Octal           | `0o77`        |
+| Binary          | `0b1111_0000` |
+| Byte (u8 only)  | `b'A'`        |
+
+##### Floating-Point Types
+
+- Rust’s floating-point types are `f32` and `f64`, which are 32 bits and 64 bits in size, respectively
+- The default type is `f64` because on modern CPUs, it’s roughly the same speed as `f32` but is capable of more precision
+- All floating-point types are signed.
+
+```rust
+fn main() {
+    let x = 2.0; // f64
+
+    let y: f32 = 3.0; // f32
+}
+```
+
+##### Numeric Operationns
+
+- Rust supports the basic mathematical operations you’d expect for all the number types: addition, subtraction, multiplication, division, and remainder
+- Integer division truncates toward zero to the nearest integer
+
+##### The Boolean Type
+
+- A Boolean type in Rust has two possible values: `true` and `false`
+- Booleans are one byte in size
+- It's specified using `bool`
+
+##### The Character Type
+
+- You can specify `char` literals with single quotes, as opposed to string literals, which use double quotes
+- Rust’s `char` type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII
+  - Accented letters; Chinese, Japanese, and Korean characters; emoji; and zero-width spaces are all valid char values in Rust
+- Unicode Scalar Values range from `U+0000` to `U+D7FF` and `U+E000` to U`+10FFFF` inclusive
+
+```rust
+fn main() {
+    let c = 'z';
+    let z: char = 'ℤ';
+    let heart_eyed_cat = '😻';
+}
+```
+
+#### Compound Types
+
+##### The Tuple Type
+
+- A tuple is a general way of grouping together a number of values with a variety of types into one compound type
+- Tuples have a fixed length: once declared, they cannot grow or shrink in size
+
+```rust
+fn main() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    // Destructuring
+    let (x, y, z) = tup;
+}
+```
+
+##### The Array Type
+
+- Unlike a tuple, every element of an array must have the same type
+- Unlike arrays in some other languages, arrays in Rust have a fixed length
+
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+}
+```
+
+- Arrays are useful when you want your data allocated on the stack rather than the heap or when you want to ensure you always have a fixed number of elements
+- An array isn’t as flexible as the vector type
+  - A vector is a similar collection type provided by the standard library that is allowed to grow or shrink in size
+  - If you’re unsure whether to use an array or a vector, chances are you should use a vector
+
+### Functions
+
+- Rust code uses snake case as the conventional style for function and variable names, in which all letters are lowercase and underscores separate words
+- In function signatures, you must declare the type of each parameter
+- Function bodies are made up of a series of statements optionally ending in an expression
+  - Statements are instructions that perform some action and do not return a value
+  - Expressions evaluate to a resultant value
