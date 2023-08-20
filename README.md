@@ -22,14 +22,14 @@ There are <!-- Count starts -->55<!-- Count ends --> TILs in this repository so 
 ## distributed-computing
 
 - [Paxos and Friends](https://github.com/fosdickio/til/blob/main/distributed-computing/06-paxos-and-friends.md) (2021-02-19)
-- [A Primer on Remote Procedure Calls](https://github.com/fosdickio/til/blob/main/distributed-computing/02-a-primer-on-remote-procedure-calls.md) (2021-01-26)
-- [Fault Tolerance](https://github.com/fosdickio/til/blob/main/distributed-computing/08-fault-tolerance.md) (2021-02-21)
-- [Replication](https://github.com/fosdickio/til/blob/main/distributed-computing/07-replication.md) (2021-02-18)
-- [Introduction to Distributed Systems](https://github.com/fosdickio/til/blob/main/distributed-computing/01-introduction-to-distributed-systems.md) (2021-01-23)
-- [Distributed Transactions](https://github.com/fosdickio/til/blob/main/distributed-computing/09-distributed-transactions.md) (2021-03-01)
-- [Time in Distributed Systems](https://github.com/fosdickio/til/blob/main/distributed-computing/03-time-in-distributed-systems.md) (2021-01-26)
-- [State in Distributed Systems](https://github.com/fosdickio/til/blob/main/distributed-computing/04-state-in-distributed-systems.md) (2021-01-30)
 - [Consensus in Distributed Systems](https://github.com/fosdickio/til/blob/main/distributed-computing/05-consensus-in-distributed-systems.md) (2021-01-30)
+- [Introduction to Distributed Systems](https://github.com/fosdickio/til/blob/main/distributed-computing/01-introduction-to-distributed-systems.md) (2021-01-23)
+- [Fault Tolerance](https://github.com/fosdickio/til/blob/main/distributed-computing/08-fault-tolerance.md) (2021-02-21)
+- [Distributed Transactions](https://github.com/fosdickio/til/blob/main/distributed-computing/09-distributed-transactions.md) (2021-03-01)
+- [A Primer on Remote Procedure Calls](https://github.com/fosdickio/til/blob/main/distributed-computing/02-a-primer-on-remote-procedure-calls.md) (2021-01-26)
+- [State in Distributed Systems](https://github.com/fosdickio/til/blob/main/distributed-computing/04-state-in-distributed-systems.md) (2021-01-30)
+- [Time in Distributed Systems](https://github.com/fosdickio/til/blob/main/distributed-computing/03-time-in-distributed-systems.md) (2021-01-26)
+- [Replication](https://github.com/fosdickio/til/blob/main/distributed-computing/07-replication.md) (2021-02-18)
 
 ## elixir
 
@@ -60,8 +60,8 @@ There are <!-- Count starts -->55<!-- Count ends --> TILs in this repository so 
 
 - [Istio Architecture](https://github.com/fosdickio/til/blob/main/istio/istio-architecture.md) (2021-09-09)
 - [Istio Snippets](https://github.com/fosdickio/til/blob/main/istio/istio-snippets.md) (2021-10-07)
-- [Istio APIs](https://github.com/fosdickio/til/blob/main/istio/istio-apis.md) (2021-09-21)
 - [Exposing Applications on an HTTP Port](https://github.com/fosdickio/til/blob/main/istio/expose-applications-via-http.md) (2021-10-07)
+- [Istio APIs](https://github.com/fosdickio/til/blob/main/istio/istio-apis.md) (2021-09-21)
 
 ## java
 
@@ -70,13 +70,13 @@ There are <!-- Count starts -->55<!-- Count ends --> TILs in this repository so 
 
 ## javascript
 
-- [Drawing On Canvas](https://github.com/fosdickio/til/blob/main/javascript/17-drawing-on-canvas.md) (2021-09-09)
-- [The Document Object Model](https://github.com/fosdickio/til/blob/main/javascript/14-the-document-object-model.md) (2021-07-13)
-- [Real-Time Javascript](https://github.com/fosdickio/til/blob/main/javascript/real-time-javascript.md) (2021-10-07)
-- [Handling Browser Events](https://github.com/fosdickio/til/blob/main/javascript/15-handling-events.md) (2021-09-09)
-- [Node.js](https://github.com/fosdickio/til/blob/main/javascript/20-nodesjs.md) (2021-09-18)
-- [JavaScript Notes](https://github.com/fosdickio/til/blob/main/javascript/javascript-notes.md) (2021-01-06)
 - [HTTP and Forms](https://github.com/fosdickio/til/blob/main/javascript/18-http-and-forms.md) (2021-09-09)
+- [Handling Browser Events](https://github.com/fosdickio/til/blob/main/javascript/15-handling-events.md) (2021-09-09)
+- [Real-Time Javascript](https://github.com/fosdickio/til/blob/main/javascript/real-time-javascript.md) (2021-10-07)
+- [Node.js](https://github.com/fosdickio/til/blob/main/javascript/20-nodesjs.md) (2021-09-18)
+- [Drawing On Canvas](https://github.com/fosdickio/til/blob/main/javascript/17-drawing-on-canvas.md) (2021-09-09)
+- [JavaScript Notes](https://github.com/fosdickio/til/blob/main/javascript/javascript-notes.md) (2021-01-06)
+- [The Document Object Model](https://github.com/fosdickio/til/blob/main/javascript/14-the-document-object-model.md) (2021-07-13)
 
 ## kotlin
 
@@ -102,23 +102,23 @@ There are <!-- Count starts -->55<!-- Count ends --> TILs in this repository so 
 
 ## python
 
-- [NumPy Snippets](https://github.com/fosdickio/til/blob/main/python/numpy-snippets.md) (2020-08-28)
-- [Python Snippets](https://github.com/fosdickio/til/blob/main/python/python-snippets.md) (2020-08-27)
-- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md) (2020-09-02)
 - [Python for Finance](https://github.com/fosdickio/til/blob/main/python/python-for-finance.md) (2020-09-12)
+- [Pandas Snippets](https://github.com/fosdickio/til/blob/main/python/pandas-snippets.md) (2020-09-02)
+- [Python Snippets](https://github.com/fosdickio/til/blob/main/python/python-snippets.md) (2020-08-27)
+- [NumPy Snippets](https://github.com/fosdickio/til/blob/main/python/numpy-snippets.md) (2020-08-28)
 
 ## react
 
+- [Testing React](https://github.com/fosdickio/til/blob/main/react/testing-react.md) (2021-07-12)
 - [React Hooks](https://github.com/fosdickio/til/blob/main/react/react-hooks.md) (2021-07-13)
 - [React Notes](https://github.com/fosdickio/til/blob/main/react/react-notes.md) (2021-07-12)
 - [React Native Notes](https://github.com/fosdickio/til/blob/main/react/react-native-notes.md) (2021-07-12)
 - [Redux Notes](https://github.com/fosdickio/til/blob/main/react/redux-notes.md) (2021-07-12)
-- [Testing React](https://github.com/fosdickio/til/blob/main/react/testing-react.md) (2021-07-12)
 
 ## rust
 
-- [Rust Notes](https://github.com/fosdickio/til/blob/main/rust/rust-notes.md) (2021-01-22)
 - [The Rust Programming Language](https://github.com/fosdickio/til/blob/main/rust/the-rust-programming-language.md) (2023-08-20)
+- [Rust Notes](https://github.com/fosdickio/til/blob/main/rust/rust-notes.md) (2021-01-22)
 
 ## sailing
 
