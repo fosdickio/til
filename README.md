@@ -110,7 +110,7 @@ There are <!-- Count starts -->58<!-- Count ends --> TILs in this repository so 
 
 ## performance
 
-- [Performance-Aware Programming](https://github.com/fosdickio/til/blob/main/performance/performance-aware-programming.md) (2023-11-04)
+- [Performance-Aware Programming](https://github.com/fosdickio/til/blob/main/performance/performance-aware-programming.md) (2023-11-06)
 
 ## python
 
