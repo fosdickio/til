@@ -4,7 +4,7 @@
 
 This repository includes Markdown files which cover hints and tips on a wide range of topics. Each file serves as a quick reference guide on an individual topic within a category which can be used at a later date. I've made the repository public in hopes that someone else might also find them useful.
 
-There are <!-- Count starts -->56<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one. The TIL list below was dynamically generated using GitHub Actions.
+There are <!-- Count starts -->58<!-- Count ends --> TILs in this repository so far and the last modified date is listed next to each one. The TIL list below was dynamically generated using GitHub Actions.
 
 <!-- TILs start -->
 ## c
@@ -36,6 +36,10 @@ There are <!-- Count starts -->56<!-- Count ends --> TILs in this repository so 
 - [Phoenix Notes](https://github.com/fosdickio/til/blob/main/elixir/phoenix-notes.md) (2020-12-17)
 - [Elixir Notes](https://github.com/fosdickio/til/blob/main/elixir/elixir-notes.md) (2020-12-22)
 
+## entrepreneurship
+
+- [Entrepreneurship Lessons](https://github.com/fosdickio/til/blob/main/entrepreneurship/a-dozen-lessons.md) (2023-11-06)
+
 ## ethereum
 
 - [Web3.js Notes](https://github.com/fosdickio/til/blob/main/ethereum/web3.js-notes.md) (2021-07-12)
@@ -55,6 +59,10 @@ There are <!-- Count starts -->56<!-- Count ends --> TILs in this repository so 
 ## graphql
 
 - [GraphQL Notes](https://github.com/fosdickio/til/blob/main/graphql/graphql-notes.md) (2020-12-08)
+
+## interpreters
+
+- [Scanning](https://github.com/fosdickio/til/blob/main/interpreters/04-scanning.md) (2023-11-06)
 
 ## istio
 
