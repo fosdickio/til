@@ -326,3 +326,5 @@ fn main() {
 ## Understanding Ownership
 
 - Ownership enables Rust to make memory safety guarantees without needing a garbage collector
+
+### What Is Ownership?
