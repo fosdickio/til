@@ -72,7 +72,3 @@ u32 DualScalar(u32 Count, u32 *Input)
 	return Sum;
 }
 ```
-
-### Single Instruction, Multiple Data
-
-
