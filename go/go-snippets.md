@@ -40,7 +40,7 @@ $ go run ./example -flag
 
 You must explicitly use `-flag=false` if you want to set a boolean flag value to `false`.
 
-#$ Database Query Execution
+## Database Query Execution
 
 Go provides three different methods for executing database queries:
 
