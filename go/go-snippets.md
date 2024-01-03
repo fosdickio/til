@@ -2,7 +2,7 @@
 
 ## Check For Known Vulnerabilities
 
-```
+```sh
 go run golang.org/x/vuln/cmd/govulncheck@latest ./...
 ```
 
@@ -33,9 +33,9 @@ The Last-Modified and If-Modified-Since headers are transparently supported. If 
 
 For flags defined with `flag.Bool()`, omitting a value when starting the application is the same as writing `-flag=true`. The following two commands are equivalent:
 
-```
-$ go run ./example -flag=true
-$ go run ./example -flag
+```sh
+go run ./example -flag=true
+go run ./example -flag
 ```
 
 You must explicitly use `-flag=false` if you want to set a boolean flag value to `false`.
@@ -55,3 +55,9 @@ The `DB.Exec()` method works with placeholder `?` parameters in three steps:
 - It creates a new prepared statement on the database using the provided SQL statement. The database parses and compiles the statement, then stores it ready for execution.
 - In a second separate step, `DB.Exec()` passes the parameter values to the database. The database then executes the prepared statement using these parameters. Because the parameters are transmitted later, after the statement has been compiled, the database treats them as pure data. They can’t change the intent of the statement. So long as the original statement is not derived from untrusted data, injection cannot occur.
 - It then closes (or deallocates) the prepared statement on the database.
+
+## Generate Self-Signed TLS Certificates
+
+```sh
+go run /usr/local/Cellar/go/1.21.5/libexec/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=localhost
+```
