@@ -58,7 +58,7 @@ scalac -Xshow-phases
 -   "Syntatic sugar" is nice for the programmer, but not really needed.
 -   New features can be implemented using existing features
 
-| Syntatic Sugar     | Before                                                            | After                                                                                  |     |
-| ------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------- | --- |
+| Syntatic Sugar     | Before                                                            | After                                                                                  |
+| ------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | De-initialization  | `var x = 1 + y;`                                                  | `var x;` <br> `x = y + y;`                                                             |
 | Syntax Translation | `for (var x = 1; x < 10; x = x + 1) {` <br> &emsp; `...` <br> `}` | `var x = 1;` <br> `while x < 10 {` <br> &emsp; `...` <br> &emsp; `x = x + 1;` <br> `}` |
