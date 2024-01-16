@@ -62,3 +62,19 @@ scalac -Xshow-phases
 | ------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | De-initialization  | `var x = 1 + y;`                                                  | `var x;` <br> `x = y + y;`                                                             |
 | Syntax Translation | `for (var x = 1; x < 10; x = x + 1) {` <br> &emsp; `...` <br> `}` | `var x = 1;` <br> `while x < 10 {` <br> &emsp; `...` <br> &emsp; `x = x + 1;` <br> `}` |
+
+## Memory / Variables / Scope
+
+```
+var x = 123;
+
+func f(x, y) {
+    var t = x + y;
+    ...
+    return t;
+}
+
+f(4, 5);
+```
+
+![Memory](img/memory.png)
