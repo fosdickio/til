@@ -78,3 +78,17 @@ f(4, 5);
 ```
 
 ![Memory](img/memory.png)
+
+"Explicit is better than implicit"
+
+```
+// Explicitly label local and global variables
+var x;  =>  (local x OR global x)
+```
+
+## LLVM
+
+-   `%` is used for local variables in LLVM (e.g., `%name = alloca i32`)
+-   `@` is used for global variables in LLVM (e.g., `@name = global i32 0`)
+
+## Tokenizing
