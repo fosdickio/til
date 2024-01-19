@@ -13,7 +13,7 @@ There are <!-- Count starts -->60<!-- Count ends --> TILs in this repository so 
 
 ## compilers
 
-- [Compiler Notes](https://github.com/fosdickio/til/blob/main/compilers/compiler-notes.md) (2024-01-16)
+- [Compiler Notes](https://github.com/fosdickio/til/blob/main/compilers/compiler-notes.md) (2024-01-18)
 
 ## concurrency
 
