@@ -59,7 +59,7 @@ There are <!-- Count starts -->60<!-- Count ends --> TILs in this repository so 
 ## go
 
 - [Go Notes](https://github.com/fosdickio/til/blob/main/go/go-notes.md) (2020-12-03)
-- [Go Snippets](https://github.com/fosdickio/til/blob/main/go/go-snippets.md) (2024-01-23)
+- [Go Snippets](https://github.com/fosdickio/til/blob/main/go/go-snippets.md) (2024-01-24)
 
 ## graphql
 
