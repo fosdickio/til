@@ -79,14 +79,32 @@ go test -v -run="^TestRunMe$" ./cmd
 # Skip specific tests
 go test -v -skip="^TestSkipMe$" ./cmd
 
+# Stops running tests after the first failure
+go test -failfast ./cmd
+```
+
+#### Cached Tests
+
+```sh
 # Ignore the cache and force tests to run
 go test -count=1 ./cmd
 
 # Clear cached results for all tests
 go clean -testcache
+```
 
-# Stops running tests after the first failure
-go test -failfast ./cmd
+#### Test Coverage
+
+```sh
+go test -cover ./...
+
+# Output a detailed breakdown of test coverage by method and function
+go test -coverprofile=/tmp/profile.out ./...
+go tool cover -func=/tmp/profile.out
+
+# Open a browser window containing a navigable and highlighted representation of your code
+go test -covermode=atomic -coverprofile=/tmp/profile.out ./...
+go tool cover -html=/tmp/profile.out
 ```
 
 ### Parallel Testing
