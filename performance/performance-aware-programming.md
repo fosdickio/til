@@ -12,7 +12,7 @@
 
 - Examples of x64 instructions for adding two integers in the CPU (usually held in registers or sometimes memory addresses):
   - `ADD` --> `A += B`
-  - `LEA` (learn effective address) --> `C = A + B`
+  - `LEA` (load effective address) --> `C = A + B`
 - Running a simple program that adds `A` and `B` is much slower in Python than C
   - Python first turns the `A + B` into its own instruction stream (instructions meant to be read by the Python interpreter rather than the CPU)
   - When the program is ran, we have to run all the instructions for Python to decode and manage that Python instruction stream, which generates massive numbers of additional instructions
