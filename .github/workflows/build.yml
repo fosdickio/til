@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       # We need the full history to in order to inspect created/updated.
       with:
-        fetch-depth: 0  
+        fetch-depth: 0
     - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.8
-    - uses: actions/cache@v2
+    - uses: actions/cache@v4
       name: Configure pip caching
       with:
         path: ~/.cache/pip
