@@ -63,8 +63,7 @@ Notes:
 
 ## Key Takeaways
 
-- LLMs replaced older rule-based and statistical NLP methods with deep learning, improving how machines understand, generate, and translate language.
-- Training happens in two stages: pretraining on next-word prediction over unlabeled text, then fine-tuning on labeled data for instructions or classification.
+- Training happens in two stages: pretraining on next-word prediction over unlabeled text then fine-tuning on labeled data for instructions or classification.
 - The transformer's core innovation is self-attention, which gives the model selective access to the full input sequence at each step of generation.
 - The original transformer paired an encoder for parsing text with a decoder for generating it. Generative LLMs like GPT and ChatGPT simplify this by using decoder-only architectures.
 - Pretraining requires massive datasets, often billions of tokens.
